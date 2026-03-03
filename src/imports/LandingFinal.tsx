@@ -1,10 +1,33 @@
 import React, { useEffect, useRef, useState } from "react";
 import BackgroundSection from "./landing/BackgroundSection";
-import { NAV_WHITE_SCROLL_END, NAV_WHITE_SCROLL_START } from "./landing/constants";
+import {
+  NAV_WHITE_SCROLL_END,
+  NAV_WHITE_SCROLL_START,
+} from "./landing/constants";
 import FooterSection from "./landing/FooterSection";
 import HeroSection from "./landing/HeroSection";
 import NavigationBar from "./landing/NavigationBar";
 import type { LandingNavigationHandlers } from "./landing/types";
+import journey from "@/assets/landing-work/journey.png";
+
+function SectionImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      style={{
+        width: "100%",
+        display: "block",
+        overflow: "visible",
+        zIndex: 100,
+        marginTop: 235,
+        marginBottom: 100,
+        transform: "scale(1.1)",
+      }}
+      loading="lazy"
+    />
+  );
+}
 
 function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
@@ -49,12 +72,14 @@ function LandingSections({
   onLetsTalkClick,
   heroRef,
   backgroundRef,
+  footerRef,
   heroCoverProgress,
 }: {
   onBackToTop: () => void;
   onLetsTalkClick: () => void;
   heroRef: React.RefObject<HTMLDivElement | null>;
   backgroundRef: React.RefObject<HTMLDivElement | null>;
+  footerRef: React.RefObject<HTMLDivElement | null>;
   heroCoverProgress: number;
 }) {
   return (
@@ -63,11 +88,28 @@ function LandingSections({
       style={{
         transform: "translate(-50%, 0) scale(0.8) ",
         transformOrigin: "top center",
+        // backgroundColor:"#FEF9F6"
       }}
     >
       <HeroSection coverProgress={heroCoverProgress} containerRef={heroRef} />
-      <BackgroundSection containerRef={backgroundRef} />
-      <FooterSection onBackToTop={onBackToTop} onLetsTalkClick={onLetsTalkClick} />
+      <div id="work" style={{width:"100%",backgroundColor:"FEF9F6"}}>
+        <BackgroundSection containerRef={backgroundRef} />
+      </div>
+      <div id="journey" style={{width:"100%"}}><SectionImage  src={journey} alt="My journey so far" /></div>
+      
+      <div
+      id="contact"
+        ref={footerRef as React.RefObject<HTMLDivElement>}
+        style={{ width: "100%" }}
+      >
+     
+        <FooterSection
+          onBackToTop={onBackToTop}
+          onLetsTalkClick={onLetsTalkClick}
+          useBgImage={true}
+        />
+     
+      </div>
     </div>
   );
 }
@@ -82,13 +124,12 @@ export default function LandingFinal({
   const [heroCoverProgress, setHeroCoverProgress] = useState(0);
   const heroRef = useRef<HTMLDivElement | null>(null);
   const backgroundRef = useRef<HTMLDivElement | null>(null);
-
-    const goTop = () => {
+  const footerRef = useRef<HTMLDivElement | null>(null);
+  const goTop = () => {
     const el = document.getElementById("top");
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
-      
       window.location.hash = "#top";
     }
   };
@@ -116,11 +157,41 @@ export default function LandingFinal({
         }
       }
 
-      setIsNavWhite((current) => (current === shouldBeWhite ? current : shouldBeWhite));
+      if (footerRef.current) {
+        // Consider the heading and any project cards (links) inside the
+        // FooterSection. If any of these elements intersect the
+        // viewport, the nav should be white.
+        const candidates = footerRef.current.querySelectorAll("h2, a");
+        for (let i = 0; i < candidates.length; i++) {
+          const el = candidates[i] as HTMLElement | null;
+          if (!el) continue;
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            shouldBeWhite = true;
+            break;
+          }
+        }
+      }
 
-      const nextCoverProgress = getHeroCoverProgress(heroRef.current, backgroundRef.current);
+      if (!shouldBeWhite && footerRef.current) {
+        const rect = footerRef.current.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          shouldBeWhite = true;
+        }
+      }
+
+      setIsNavWhite((current) =>
+        current === shouldBeWhite ? current : shouldBeWhite,
+      );
+
+      const nextCoverProgress = getHeroCoverProgress(
+        heroRef.current,
+        backgroundRef.current,
+      );
       setHeroCoverProgress((current) =>
-        Math.abs(current - nextCoverProgress) < 0.001 ? current : nextCoverProgress,
+        Math.abs(current - nextCoverProgress) < 0.001
+          ? current
+          : nextCoverProgress,
       );
 
       frameId = null;
@@ -135,7 +206,9 @@ export default function LandingFinal({
     handleUpdateRequest();
     window.addEventListener("scroll", handleUpdateRequest, { passive: true });
     window.addEventListener("resize", handleUpdateRequest);
-    scrollParent?.addEventListener("scroll", handleUpdateRequest, { passive: true });
+    scrollParent?.addEventListener("scroll", handleUpdateRequest, {
+      passive: true,
+    });
 
     return () => {
       window.removeEventListener("scroll", handleUpdateRequest);
@@ -148,7 +221,11 @@ export default function LandingFinal({
   }, []);
 
   return (
-    <div id="top" className="relative min-h-screen w-full bg-[#fefcf4]" data-name="Landing final">
+    <div
+      id="top"
+      className="relative min-h-screen w-full bg-[#fefcf4]"
+      data-name="Landing final"
+    >
       <NavigationBar
         onHomeClick={onHomeClick}
         onWorkClick={onWorkClick}
@@ -160,6 +237,7 @@ export default function LandingFinal({
         onBackToTop={goTop}
         onLetsTalkClick={onContactClick}
         heroRef={heroRef}
+        footerRef={footerRef}
         backgroundRef={backgroundRef}
         heroCoverProgress={heroCoverProgress}
       />

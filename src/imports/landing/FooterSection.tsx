@@ -62,7 +62,7 @@ function SocialMedia({ useBgImage }: { useBgImage: boolean }) {
   return (
     <div
       className="flex items-center justify-center "
-      style={{ gap: 22, marginTop: 10 }}
+      style={{ gap: 32, marginTop: 10 }}
     >
       <SocialLink
         href="https://www.linkedin.com/in/saniya"
@@ -74,7 +74,7 @@ function SocialMedia({ useBgImage }: { useBgImage: boolean }) {
           className="block size-full"
           fill="none"
           preserveAspectRatio="none"
-          viewBox="0 0 50 50"
+          viewBox="0 0 45 50"
         >
           <path
             d={svgPaths.p30ba2c00}
@@ -93,7 +93,7 @@ function SocialMedia({ useBgImage }: { useBgImage: boolean }) {
           className="block size-full"
           fill="none"
           preserveAspectRatio="none"
-          viewBox="0 0 50 50"
+          viewBox="0 0 45 50"
         >
           <path
             d={svgPaths.p3150bc00}
@@ -103,26 +103,7 @@ function SocialMedia({ useBgImage }: { useBgImage: boolean }) {
           />
         </svg>
       </SocialLink>
-      <SocialLink
-        href="https://www.instagram.com/saniya"
-        label="Instagram"
-        external
-        useBgImage={useBgImage}
-      >
-        <svg
-          className="block size-full"
-          fill="none"
-          preserveAspectRatio="none"
-          viewBox="0 0 50 50"
-        >
-          <path
-            d={svgPaths.p2bbb0d20}
-            fill={
-              useBgImage ? "var(--fill-0, #ffffff)" : "var(--fill-0, #101010)"
-            }
-          />
-        </svg>
-      </SocialLink>
+
       <SocialLink
         href="https://www.behance.net/saniya"
         label="Behance"
@@ -133,7 +114,7 @@ function SocialMedia({ useBgImage }: { useBgImage: boolean }) {
           className="block size-full"
           fill="none"
           preserveAspectRatio="none"
-          viewBox="0 0 50 50"
+          viewBox="0 0 45 50"
         >
           <path
             d={svgPaths.p2b85ed00}
@@ -334,9 +315,9 @@ export default function FooterSection({
             fontFamily: "Martel, serif",
             bottom: 22,
             fontSize: 15,
-            letterSpacing: 0.5,
+            letterSpacing: 0.2,
             color: useBgImage ? "#fefcf4" : "#101010",
-            maxWidth: 1400,
+            maxWidth: "2000px",
           }}
         >
           Built on coffee, love, many iterations, and way too many open tabs.

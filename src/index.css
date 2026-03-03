@@ -1,4 +1,17 @@
 /*! tailwindcss v4.1.3 | MIT License | https://tailwindcss.com */
+
+ @media (max-width: 1400px) {
+  .ba {
+  /* background-color: #717182; */
+  margin-left: -28%;
+}
+ }
+
+ .ba {
+  margin-right: -15%;
+ }
+
+
 html, body {
   overflow-x: clip;
 }

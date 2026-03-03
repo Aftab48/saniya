@@ -94,7 +94,7 @@ export default function MentorMePage() {
             onMouseLeave={() => setLinkHovered(false)}
             style={{
               position: "absolute",
-              bottom: 330,
+              bottom: 305,
               left: "50%",
               transform: "translateX(-50%)",
               color: linkHovered ? "#9e9e9eff" : "white",

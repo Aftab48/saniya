@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 // @ts-ignore
 // import imgBackground from "figma:asset/59441181721f9ec0057cf0ca5351b45db44c073a.png";
 import imgBazarghorr from "@/assets/work/bazarghorr1.png";
-import imgBuildMyStore from "@/assets/work/bms1.png";
+import imgBuildMyStore from "@/assets/work/bmsC.png";
 import imgMentorMe from "@/assets/work/mentorme1.png";
 import newBackground from "@/assets/landing-work/blue-bg.png"
+// import journey from "@/assets/landing-work/journey.png"
+
 type BackgroundSectionProps = {
   containerRef?: React.RefObject<HTMLDivElement | null>;
 };
@@ -18,9 +20,22 @@ type ProjectData = {
 
 const PROJECTS: ProjectData[] = [
   { image: imgBazarghorr, alt: "Bazarghorr — Hyperlocal Grocery App", link: "/bazarghorr" },
-  { image: imgBuildMyStore, alt: "BuildMyStore — All-in-One Ecommerce Platform", link: "/bms" },
+
   { image: imgMentorMe, alt: "MentorMe — Purpose-Led Brand Identity", link: "/mentorme" },
+    { image: imgBuildMyStore, alt: "BuildMyStore — All-in-One Ecommerce Platform", link: "/" }
 ];
+
+
+ function SectionImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      style={{ width: "100%", display: "block", overflow: "visible",zIndex:100 }}
+      loading="lazy"
+    />
+  );
+}
 
 function WorkCard({ project }: { project: ProjectData }) {
   return (
@@ -59,7 +74,7 @@ function WorkCard({ project }: { project: ProjectData }) {
 
 export default function BackgroundSection({ containerRef }: BackgroundSectionProps) {
   return (
-    <div ref={containerRef} className="relative w-full shrink-0" style={{ minHeight: 3500,top:185}}>
+    <div ref={containerRef} className="relative w-full shrink-0" style={{ minHeight: 3500,top:160}}>
       {/* Full-width background image */}
       <div
         className="absolute left-1/2 top-0 h-full"
@@ -105,7 +120,9 @@ export default function BackgroundSection({ containerRef }: BackgroundSectionPro
         {PROJECTS.map((project) => (
           <WorkCard key={project.link} project={project} />
         ))}
+        
       </div>
+      {/* <SectionImage src={journey} alt="My journey so far" /> */}
     </div>
   );
 }
