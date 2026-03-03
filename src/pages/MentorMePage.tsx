@@ -87,7 +87,7 @@ export default function MentorMePage() {
         <div id="top" style={{ position: "relative" }}>
           <SectionImage src={s1} alt="MentorMe Case Study - Section 1" />
           <a
-            href="https://www.mentorme.com/"
+            href="https://drive.google.com/file/d/1149GpOt_2m2TxVyLWcNBbLu0sCTV06Cr/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             onMouseEnter={() => setLinkHovered(true)}

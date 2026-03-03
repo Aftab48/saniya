@@ -5,6 +5,7 @@ import imgContactMe1 from "figma:asset/1077e5ec0d9d3a9da413e90dbe1960e8121cb40b.
 import imgLocationPng1 from "figma:asset/33c5347c8865ddee8a9ed022a5443794850405f7.png";
 // @ts-ignore
 import imgMeIcon1 from "figma:asset/c86a38aafd6e5f2f41dab258742a41c31f635ea3.png";
+import { Link } from "react-router-dom";
 
 const EXPANDABLE_CARD_BASE_CLASS =
   "h-[140px] shrink-0 rounded-[48px] border border-solid border-[#2d6dc3] bg-[rgba(226,226,226,0.2)] transition-all duration-500 ease-in-out";
@@ -97,13 +98,30 @@ function LocationCard({ isActive, onHover }: ExpandableCardProps) {
 }
 
 function ContactCard({ isActive, onHover }: ExpandableCardProps) {
+    const goContact = () => {
+    const el = document.getElementById("contact");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.location.hash = "#contact";
+    }
+  };
   return (
     <div
       className={EXPANDABLE_CARD_BASE_CLASS}
       style={{ width: isActive ? 465 : 170 }}
       onMouseEnter={onHover}
     >
-      <div className="relative flex h-full items-center gap-5 pl-[10px]">
+      
+      <div className="relative flex h-full items-center gap-5 pl-[10px] cursor-pointer" 
+      // style={{pointerEvents:""}}
+      role="button"
+        tabIndex={0}
+        onClick={goContact}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") goContact();
+        }}
+      >
         <div
           className="relative flex h-[135px] w-[135px] shrink-0 items-center justify-center"
           data-name="contact me"
@@ -117,6 +135,7 @@ function ContactCard({ isActive, onHover }: ExpandableCardProps) {
           Let&apos;s Talk Design
         </p>
       </div>
+      
     </div>
   );
 }
