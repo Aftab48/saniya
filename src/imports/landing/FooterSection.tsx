@@ -3,6 +3,7 @@ import svgPaths from "../svg-ghixc67pzt";
 import footerImage from "figma:asset/thumbs-up-final.png";
 import bgImage from "@/assets/landing-work/blue-bg.png";
 import footerBg from "@/assets/landing-work/footer bg.png";
+import { Link } from "react-router-dom";
 type FooterSectionProps = {
   onBackToTop: () => void;
   onLetsTalkClick: () => void;
@@ -65,7 +66,7 @@ function SocialMedia({ useBgImage }: { useBgImage: boolean }) {
       style={{ gap: 32, marginTop: 10 }}
     >
       <SocialLink
-        href="https://www.linkedin.com/in/saniya"
+        href="https://www.linkedin.com/in/saniya-inamdar-3b380b324/"
         label="LinkedIn"
         external
         useBgImage={useBgImage}
@@ -85,7 +86,7 @@ function SocialMedia({ useBgImage }: { useBgImage: boolean }) {
         </svg>
       </SocialLink>
       <SocialLink
-        href="mailto:saniya@example.com"
+        href="mailto:saniya.inamdar2018@gmail.com"
         label="Email"
         useBgImage={useBgImage}
       >
@@ -136,29 +137,39 @@ function SocialMedia({ useBgImage }: { useBgImage: boolean }) {
 
 function LetsTalkLabelLine({ useBgImage }: { useBgImage: boolean }) {
   return (
-    <div className="relative flex h-[54px] items-center justify-center">
-      <p
-        className="absolute left-[calc(50%-100px)] text-[32px] not-italic leading-[normal]"
-        style={{ fontFamily: "Martel, serif", fontWeight: 800, color: useBgImage ? "#fefcf4" : "#2D6DC3" }}
-      >
-        Let&apos;s Talk
-      </p>
-      <div className="absolute left-[176px] top-[27px] h-0 w-[24px]">
-        <div className="absolute inset-[-7.36px_-4.17%_-7.36px_0]">
-          <svg
-            className="block size-full"
-            fill="none"
-            preserveAspectRatio="none"
-            viewBox="0 0 25 14.7279"
-          >
-            <path
-              d={svgPaths.p3a9c1f00}
-              fill={useBgImage ? "#fefcf4" : "#2D6DC3"}
-            />
-          </svg>
+    <Link to="mailto:saniya.inamdar2018@gmail.com">
+      <div className="relative flex h-[54px] items-center justify-center">
+        
+        <p
+          className="absolute left-[calc(50%-100px)] text-[32px] not-italic leading-[normal]"
+          style={{
+            fontFamily: "Martel, serif",
+            fontWeight: 800,
+            color: useBgImage ? "#fefcf4" : "#2D6DC3",
+          }}
+        >
+          Let&apos;s Talk
+        </p>
+
+        <div className="absolute left-[176px] top-[27px] h-0 w-[24px]">
+          <div className="absolute inset-[-7.36px_-4.17%_-7.36px_0]">
+            <svg
+              className="block size-full"
+              fill="none"
+              preserveAspectRatio="none"
+              viewBox="0 0 25 14.7279"
+            >
+              <path
+                d={svgPaths.p3a9c1f00}
+                fill={useBgImage ? "#fefcf4" : "#2D6DC3"}
+              />
+            </svg>
+          </div>
         </div>
+         
       </div>
-    </div>
+      </Link>
+   
   );
 }
 
@@ -192,7 +203,7 @@ function ContactCta({
       </h1>
       <p
         className="mb-12 text-center font-['Martel:DemiBold',sans-serif] text-[28px] not-italic leading-[normal] "
-        style={{ fontFamily: "Martel, serif",marginTop:30 }}
+        style={{ fontFamily: "Martel, serif", marginTop: 30 }}
       >
         Open to opportunities, collabs, creative challenges, or simply a good
         conversation.

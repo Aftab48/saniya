@@ -18,11 +18,11 @@ function SectionImage({ src, alt }: { src: string; alt: string }) {
       style={{
         width: "100%",
         display: "block",
-        overflow: "visible",
+        overflow: "hidden",
         zIndex: 100,
-        marginTop: 235,
+        marginTop: 220,
         marginBottom: 100,
-        transform: "scale(1.1)",
+        transform: "scale(1.2)",
       }}
       loading="lazy"
     />

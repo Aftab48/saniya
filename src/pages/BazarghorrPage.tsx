@@ -2021,10 +2021,10 @@ export default function BazarghorrPage() {
                   outline: none;
                 }
               `}</style>
-                <Link to="/bazarghorr-vendor" className="bazar-link">
+                <Link to="https://www.figma.com/design/5Jb4JKL8J5oV8EkqypSNYS/bazarghor-pvt?node-id=0-1&t=4canynYOg7fTAMoG-1" className="bazar-link">
                   VIEW PROTOTYPE
                 </Link>
-                <Link to="/bazarghorr-vendor" className="bazar-link">
+                <Link to="https://play.google.com/store/apps/details?id=com.bazarghorr.partner" className="bazar-link">
                   VIEW ON PLAY STORE
                 </Link>
               </div>

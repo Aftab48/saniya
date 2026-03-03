@@ -74,7 +74,7 @@ function WorkCard({ project }: { project: ProjectData }) {
 
 export default function BackgroundSection({ containerRef }: BackgroundSectionProps) {
   return (
-    <div ref={containerRef} className="relative w-full shrink-0" style={{ minHeight: 3500,top:160}}>
+    <div ref={containerRef} className="relative w-full shrink-0" style={{ minHeight: 3500,top:160,zIndex:105}}>
       {/* Full-width background image */}
       <div
         className="absolute left-1/2 top-0 h-full"
@@ -100,7 +100,7 @@ export default function BackgroundSection({ containerRef }: BackgroundSectionPro
           alignItems: "center",
           paddingTop: 80,
           paddingBottom: 100,
-          gap: 48,
+          gap: 108,
         }}
       >
         <h2
