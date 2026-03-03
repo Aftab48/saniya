@@ -270,18 +270,21 @@ export default function BMSPage() {
             style={{
               // width: "50%",
               objectFit: "cover",
-              backgroundColor: "#fffcf4ff",
+              // backgroundColor: "#FEF9F6",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               margin: "80px 30px",
             }}
           >
-            <img
+            {/* <img
               src={s10}
               alt="BMS Case Study - Section 10"
               style={{ width: "100%", objectFit: "cover" }}
-            />
+            /> */}
+            <div>
+              <p>hii</p>
+            </div>
           </div>
         </div>
 

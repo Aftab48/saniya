@@ -95,7 +95,8 @@ function PhoneMockup({
   return (
     <div
       style={{
-        width,
+        width: "100%",
+        maxWidth: width,
         aspectRatio: aspectRatio,
         borderRadius: width * 0.13,
         border: `${Math.max(6, width * 0.028)}px solid #1a1a1a`,
@@ -269,7 +270,7 @@ function VendorAppUISection() {
                 fontSize: 16,
                 lineHeight: 1.7,
                 color: "#333",
-                width:710
+                maxWidth: 710
               }}
             >
               The Onboarding Flow Starts With A Landing Page That Sets Context
@@ -670,7 +671,7 @@ function MainScreensSection() {
         <div
           style={{
             position: "relative",
-            marginBottom: 80,
+            // marginBottom: 200,
             marginTop: -300,
             marginRight: "7%",
           }}
@@ -681,6 +682,7 @@ function MainScreensSection() {
               justifyContent: "flex-end",
               alignItems: "flex-end",
               gap: 42,
+              marginBottom: 280,
             }}
           >
             <div style={{ alignSelf: "flex-end", textAlign: "right", flex: 1 }}>
@@ -1066,8 +1068,8 @@ function CustomerAppUISection() {
             <div
               style={{
                 position: "absolute",
-                top: -140,
-                right: 0,
+                top: -100,
+                right: -80,
                 width: 200,
                 height: 250,
                 
@@ -1080,8 +1082,8 @@ function CustomerAppUISection() {
                 src={thinkingWoman}
                 alt="Customer illustration"
                 style={{
-                  width: 180,
-                  height: 220,
+                  width: 140,
+                  height: 180,
                   transform: "scaleX(1)",
                   borderRadius: "50%",
                   objectFit: "cover",
@@ -1106,10 +1108,12 @@ function CustomerAppUISection() {
             <p
               style={{
                 fontFamily: "Alike, serif",
+                maxWidth:730,
                 fontWeight: 400,
                 fontSize: 18,
                 lineHeight: 1.7,
                 color: "#333",
+                
               }}
             >
               Customer onboarding is kept simple with phone number and OTP
@@ -1243,11 +1247,12 @@ function CustomerMainScreensSection() {
 
         {/* ── BUY AGAIN ── */}
         <div
+        className="ba"
           style={{
             position: "relative",
             marginBottom: 80,
             marginTop: -400,
-            marginRight: "-15%",
+            // marginRight: "-15%",
           }}
         >
           <div
@@ -1435,6 +1440,7 @@ function CustomerMainScreensSection() {
               justifyContent: "flex-end",
               alignItems: "flex-end",
               gap: 42,
+              marginBottom: 280,
             }}
           >
             <div style={{ alignSelf: "flex-end", textAlign: "right", flex: 1 }}>
@@ -1718,12 +1724,12 @@ function CustomerSection() {
           >
             <p
               style={{
-                maxWidth: 850,
+                maxWidth: 750,
                 textAlign: "left",
                 margin: 0,
                 fontFamily: "Alike, serif",
                 fontWeight: 400,
-                fontSize: 20,
+                fontSize: 18,
                 lineHeight: 1.4,
               }}
             >
@@ -1864,6 +1870,7 @@ export default function BazarghorrPage() {
   return (
     <div
       id="top"
+      className="bazarghorr-page"
       style={{
         // width: "100%",
         maxWidth: "100%",
@@ -1875,7 +1882,7 @@ export default function BazarghorrPage() {
       }}
     >
       {/* s1: Hero — rectangular, light bg */}
-      <div style={{ background: "#fefcf4", position: "relative" }}>
+      <div className="bz" style={{ background: "#fefcf4", position: "relative"  }}>
         {showStickyButton && (
           <button
             type="button"
