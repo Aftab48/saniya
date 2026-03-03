@@ -106,7 +106,7 @@ function SocialMedia({ useBgImage }: { useBgImage: boolean }) {
       </SocialLink>
 
       <SocialLink
-        href="https://www.behance.net/saniya"
+        href="https://www.behance.net/"
         label="Behance"
         external
         useBgImage={useBgImage}
@@ -329,6 +329,9 @@ export default function FooterSection({
             letterSpacing: 0.2,
             color: useBgImage ? "#fefcf4" : "#101010",
             maxWidth: "2000px",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
         >
           Built on coffee, love, many iterations, and way too many open tabs.

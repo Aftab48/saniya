@@ -33,6 +33,13 @@ export default function MentorMePage() {
     }
   };
   useEffect(() => {
+       const metadata = {
+        title: 'MentorMe: Purpose-Led Brand Identity Design Case Study',
+      description: 'Portfolio of Saniya — case studies, selected work, and contact.',
+      // image: String(journey),
+    };
+
+    document.title = metadata.title;
     const onScroll = () => {
       if (window.scrollY > 80) {
         setShowStickyButton(true);

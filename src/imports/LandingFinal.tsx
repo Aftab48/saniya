@@ -92,23 +92,25 @@ function LandingSections({
       }}
     >
       <HeroSection coverProgress={heroCoverProgress} containerRef={heroRef} />
-      <div id="work" style={{width:"100%",backgroundColor:"FEF9F6"}}>
+
+      <div id="work" style={{ width: "100%", backgroundColor: "FEF9F6" }}>
         <BackgroundSection containerRef={backgroundRef} />
       </div>
-      <div id="journey" style={{width:"100%"}}><SectionImage  src={journey} alt="My journey so far" /></div>
-      
+
+      <div id="journey" style={{ width: "100%" }}>
+        <SectionImage src={journey} alt="My journey so far" />
+      </div>
+
       <div
-      id="contact"
+        id="contact"
         ref={footerRef as React.RefObject<HTMLDivElement>}
         style={{ width: "100%" }}
       >
-     
         <FooterSection
           onBackToTop={onBackToTop}
           onLetsTalkClick={onLetsTalkClick}
           useBgImage={true}
         />
-     
       </div>
     </div>
   );
@@ -135,32 +137,82 @@ export default function LandingFinal({
   };
 
   useEffect(() => {
+    const prevTitle = document.title;
+    const prevMeta = new Map<string, string | null>();
+
+    function updateMeta(
+      attr: "name" | "property",
+      key: string,
+      content: string,
+    ) {
+      const selector = `meta[${attr}="${key}"]`;
+      let el = document.head.querySelector(selector) as HTMLMetaElement | null;
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
+        prevMeta.set(`${attr}:${key}`, null);
+      } else {
+        prevMeta.set(`${attr}:${key}`, el.content || null);
+      }
+      el.content = content;
+    }
+
+    // Customize these values as needed for the landing page
+    const metadata = {
+      title: "Saniya — Product & Visual Designer",
+      description:
+        "Portfolio of Saniya — case studies, selected work, and contact.",
+      image: String(journey),
+    };
+
+    document.title = metadata.title;
+    updateMeta("name", "description", metadata.description);
+    updateMeta("property", "og:title", metadata.title);
+    updateMeta("property", "og:description", metadata.description);
+    updateMeta("property", "og:image", metadata.image);
+    updateMeta("name", "twitter:card", "summary_large_image");
+    updateMeta("name", "twitter:title", metadata.title);
+    updateMeta("name", "twitter:description", metadata.description);
+    updateMeta("name", "twitter:image", metadata.image);
+
+    return () => {
+      document.title = prevTitle;
+      prevMeta.forEach((value, k) => {
+        const [attr, key] = k.split(":");
+        const selector = `meta[${attr}="${key}"]`;
+        const el = document.head.querySelector(
+          selector,
+        ) as HTMLMetaElement | null;
+        if (!el) return;
+        if (value === null) {
+          // was created by us, remove it
+          el.remove();
+        } else {
+          el.content = value;
+        }
+      });
+    };
+  }, []);
+
+  useEffect(() => {
     let frameId: number | null = null;
     const scrollParent = findScrollParent(heroRef.current);
 
     const updatePageAnimations = () => {
       // Make nav white only while the "SELECTED WORK" heading is visible.
       let shouldBeWhite = false;
+      let backgroundVisible = false;
       if (backgroundRef.current) {
-        // Consider the heading and any project cards (links) inside the
-        // BackgroundSection. If any of these elements intersect the
-        // viewport, the nav should be white.
-        const candidates = backgroundRef.current.querySelectorAll("h2, a");
-        for (let i = 0; i < candidates.length; i++) {
-          const el = candidates[i] as HTMLElement | null;
-          if (!el) continue;
-          const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
-            shouldBeWhite = true;
-            break;
-          }
+        // Make nav white while the entire BackgroundSection is visible
+        const rect = backgroundRef.current.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          shouldBeWhite = true;
+          backgroundVisible = true;
         }
       }
 
       if (footerRef.current) {
-        // Consider the heading and any project cards (links) inside the
-        // FooterSection. If any of these elements intersect the
-        // viewport, the nav should be white.
         const candidates = footerRef.current.querySelectorAll("h2, a");
         for (let i = 0; i < candidates.length; i++) {
           const el = candidates[i] as HTMLElement | null;
@@ -177,6 +229,17 @@ export default function LandingFinal({
         const rect = footerRef.current.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom > 0) {
           shouldBeWhite = true;
+        }
+      }
+
+      // Make nav blue for `#journey` only when BackgroundSection is not visible.
+      if (!backgroundVisible) {
+        const journeyEl = document.getElementById("journey");
+        if (journeyEl) {
+          const rect = journeyEl.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            shouldBeWhite = false;
+          }
         }
       }
 

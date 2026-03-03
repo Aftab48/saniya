@@ -1816,6 +1816,14 @@ export default function BazarghorrPage() {
   // When showButton becomes true, make button visible again
 
   useEffect(() => {
+
+       const metadata = {
+          title: 'Bazarghorr: Hyperlocal Grocery App Design Case Study',
+          description: 'Portfolio of Saniya — case studies, selected work, and contact.',
+          // image: String(journey),
+        };
+    
+        document.title = metadata.title;
     const observer = new window.IntersectionObserver(
       ([entry]) => {
         const isIntersecting = entry.isIntersecting;
