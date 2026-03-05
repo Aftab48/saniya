@@ -161,7 +161,7 @@ export default function BMSPage() {
         maxWidth: "100%",
         minHeight: "100vh",
         background: "#FEF9F6",
-        marginTop: 0,
+        marginTop: -29,
       }}
     >
       <div style={{ background: "#FEF9F6", position: "relative" }}>
