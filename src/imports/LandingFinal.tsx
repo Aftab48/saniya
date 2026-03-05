@@ -97,7 +97,7 @@ function LandingSections({
         <BackgroundSection containerRef={backgroundRef} />
       </div>
 
-      <div id="journey" style={{ width: "100%" }}>
+      <div id="journey" style={{ width: "100%",transform:"scale(1.05)" }}>
         <SectionImage src={journey} alt="My journey so far" />
       </div>
 
@@ -204,9 +204,10 @@ export default function LandingFinal({
       let shouldBeWhite = false;
       let backgroundVisible = false;
       if (backgroundRef.current) {
-        // Make nav white while the entire BackgroundSection is visible
+        // Make nav white only when the BackgroundSection's top reaches the top of the viewport
         const rect = backgroundRef.current.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
+        // previously any visibility made it white; require the background's top to be at (or above) viewport top
+        if (rect.top <= 0 && rect.bottom > 0) {
           shouldBeWhite = true;
           backgroundVisible = true;
         }
