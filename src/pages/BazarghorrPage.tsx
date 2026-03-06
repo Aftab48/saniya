@@ -227,8 +227,8 @@ function VendorAppUISection() {
             <div
               style={{
                 position: "absolute",
-                top: -100,
-                right: 0,
+                top: -80,
+                right: -20,
                 width: 160,
                 height: 180,
                
@@ -242,8 +242,8 @@ function VendorAppUISection() {
                 src={maleVendorThinking}
                 alt="Vendor illustration"
                 style={{
-                  width: 150,
-                  height: 170,
+                  width: 130,
+                  height: 150,
                   transform: "scaleX(1)",
                   borderRadius: "50%",
                   objectFit: "cover",
@@ -1068,8 +1068,8 @@ function CustomerAppUISection() {
             <div
               style={{
                 position: "absolute",
-                top: -100,
-                right: -80,
+                top: -80,
+                right: -60,
                 width: 200,
                 height: 250,
                 
@@ -1082,8 +1082,8 @@ function CustomerAppUISection() {
                 src={thinkingWoman}
                 alt="Customer illustration"
                 style={{
-                  width: 140,
-                  height: 180,
+                  width: 120,
+                  height: 160,
                   transform: "scaleX(1)",
                   borderRadius: "50%",
                   objectFit: "cover",
@@ -1246,6 +1246,15 @@ function CustomerMainScreensSection() {
         </div>
 
         {/* ── BUY AGAIN ── */}
+        <div>
+          <style>
+            {` @media (min-width: 800px) and (max-width: 1499px){
+              .ba{
+                margin-right: -20%;
+              }
+            }`}
+          </style>
+       
         <div
         className="ba"
           style={{
@@ -1323,6 +1332,7 @@ function CustomerMainScreensSection() {
             </div>
           </div>
         </div>
+         </div>
 
         {/* ── CUSTOMER FLOW ── */}
         <div
@@ -1943,13 +1953,24 @@ export default function BazarghorrPage() {
                 color: "#888",
                 marginBottom: 12,
                 display: "flex",
-                justifyContent: "space-around",
+                justifyContent: "space-between",
                 gap: 30,
-              }}
+                flexWrap: "wrap",
+                alignItems: "center"}}
             >
-              <p style={{ marginLeft: -260 }}> 01/10</p>
-              <p style={{marginRight:-170}}>PROJECT OVERVIEW</p>
-              <p>OBJECTIVE</p>
+              <p style={{  }}> 01/10</p>
+              <p style={{}}>PROJECT OVERVIEW</p>
+               <p
+               style={{
+                  margin: 0,
+                  flex: "0 0 auto",
+                  textAlign: "left",
+
+                  transform: "translateX(-160px)", // shifted further left
+                }}
+              >
+                OBJECTIVE
+              </p>
             </div>
             <div
               style={{

@@ -191,7 +191,7 @@ export default function HeroSection({
         </div>
         <div
           className="absolute left-1/2 -translate-x-1/2 w-full max-w-[800px] px-4 text-center font-['Martel:ExtraBold',sans-serif] text-[22px] not-italic leading-[normal] text-[#2d6dc3]"
-          style={{ top: "600px", fontWeight: 800, fontFamily: "Martel, serif" }}
+          style={{ top: "500px", fontWeight: 800, fontFamily: "Martel, serif" }}
         >
           <p className="mb-0">
             Designing meaningful experiences where every interaction is crafted with

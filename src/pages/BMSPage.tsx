@@ -138,8 +138,9 @@ export default function BMSPage() {
   };
   useEffect(() => {
     const metadata = {
-        title: 'BuildMyStore — Landing Page Redesign Case Study',
-      description: 'Portfolio of Saniya — case studies, selected work, and contact.',
+      title: "BuildMyStore — Landing Page Redesign Case Study",
+      description:
+        "Portfolio of Saniya — case studies, selected work, and contact.",
       // image: String(journey),
     };
 
@@ -203,13 +204,13 @@ export default function BMSPage() {
             margin: "30px 0 30px 0",
             alignItems: "start",
             justifyContent: "space-evenly",
-            fontSize: "clamp(19px, 1.7vw, 31px)",
+            fontSize: "clamp(19px, 2.0vw, 35px)",
             fontWeight: 500,
             letterSpacing: 1.5,
             fontFamily: "Montserrat, serif",
             color: "#2d2d2d",
-            gap: 30,
-            padding:"20px"
+            gap: 10,
+            paddingTop: "24px",
           }}
         >
           <p>BUILDMYSTORE</p>
@@ -241,7 +242,7 @@ export default function BMSPage() {
             style={{
               alignItems: "flex-start",
               justifyContent: "flex-start",
-              gap: "50px",
+              gap: "30px",
               textAlign: "left",
               fontFamily: "Lucida Sans, sans-serif",
               fontSize: 18,
@@ -276,19 +277,19 @@ export default function BMSPage() {
               intuitive and impactful way.
             </p>
             <div>
-              <h2 style={{color:"#2d2d2d70"}}>Company</h2>
+              <h2 style={{ color: "#2d2d2d70" }}>Company</h2>
               <p>BuildMyStore</p>
             </div>
             <div>
-              <h2 style={{color:"#2d2d2d70"}}>Category</h2>
+              <h2 style={{ color: "#2d2d2d70" }}>Category</h2>
               <p>ECOMMERCE</p>
             </div>
             <div>
-              <h2 style={{color:"#2d2d2d70"}}>Timeline</h2>
+              <h2 style={{ color: "#2d2d2d70" }}>Timeline</h2>
               <p>March 2025 - May 2025 </p>
             </div>
             <div>
-              <h2 style={{color:"#2d2d2d70"}}>Role</h2>
+              <h2 style={{ color: "#2d2d2d70" }}>Role</h2>
               <p>UI/UX Designer</p>
             </div>
 
@@ -346,7 +347,7 @@ export default function BMSPage() {
               width: "50%",
               alignItems: "flex-start",
               justifyContent: "flex-start",
-              margin: "20px 30px 20px 70px",
+              margin: "17px 30px 20px 100px",
               fontFamily: "Lucida Sans, sans-serif",
               fontSize: 21,
               color: "#2d2d2d",
@@ -425,7 +426,7 @@ export default function BMSPage() {
 
         {/* Section-5-end goals */}
 
-        <div style={{ margin: 70 }}>
+        <div style={{ margin: 70, transform: "scale(0.95)" }}>
           <SectionImage src={endGoals} alt="BMS Case Study - End Goals" />
         </div>
 
@@ -436,14 +437,14 @@ export default function BMSPage() {
             // display: "flex",
             position: "relative",
             backgroundColor: "#65a3d4",
-            height: 790,
+            height: 1050,
           }}
         >
           <div
             style={{
               width: "100%",
               objectFit: "cover",
-              backgroundColor: "#65a3d4",
+              backgroundColor: "#5EA0D8",
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-start",
@@ -465,7 +466,13 @@ export default function BMSPage() {
 
             <div style={{ width: "100%", marginTop: 10 }}>
               <div
-                style={{ height: 580, borderRadius: 8, overflow: "visible" }}
+                style={{
+                  height: "clamp(660px, 85vh, 950px)",
+                  borderRadius: 8,
+                  overflow: "hidden",
+                  transform: "none",
+                  backgroundColor: "#5EA0D8",
+                }}
               >
                 <video
                   src={bmsBlue}
@@ -473,6 +480,8 @@ export default function BMSPage() {
                   muted
                   loop
                   playsInline
+                  onMouseEnter={(e) => e.currentTarget.pause()}
+                  onMouseLeave={(e) => e.currentTarget.play()}
                   style={{
                     width: "100%",
                     height: "100%",
@@ -492,12 +501,12 @@ export default function BMSPage() {
               margin: "20px 0 20px 0",
               alignItems: "start",
               justifyContent: "space-evenly",
-              fontSize: "clamp(19px, 1.7vw, 31px)",
+              fontSize: "clamp(19px, 1.7vw, 34px)",
               fontWeight: 500,
               letterSpacing: 1.3,
               fontFamily: "Montserrat, serif",
               color: "#2d2d2d",
-              gap: 20,
+              gap: 7,
             }}
           >
             <p>BREAKDOWN OF THE PROBLEM</p>
@@ -510,7 +519,7 @@ export default function BMSPage() {
             style={{
               alignItems: "center",
               justifyContent: "center",
-              width: 500,
+              width: 680,
               margin: "0 auto",
             }}
           >
@@ -519,9 +528,9 @@ export default function BMSPage() {
                 maxWidth: "100%",
                 textAlign: "center",
                 fontFamily: "Lucida Sans, sans-serif",
-                fontSize: 18,
+                fontSize: 20,
                 color: "#2d2d2d",
-                marginBottom: -50,
+                marginBottom: -160,
                 marginTop: 15,
               }}
             >
@@ -531,7 +540,7 @@ export default function BMSPage() {
           </div>
           <div></div>
 
-          <div style={{ transform: "scale(.8)" }}>
+          <div style={{ transform: "scale(.7)" }}>
             <SectionImage
               src={breakDown}
               alt="BMS Case Study - Breakdown of the Problem"
@@ -553,7 +562,7 @@ export default function BMSPage() {
               width: "50%",
               alignItems: "flex-start",
               justifyContent: "flex-start",
-              margin: "20px 30px 20px 70px",
+              margin: "20px 30px 20px 100px",
               fontWeight: 700,
               fontSize: 21,
             }}
@@ -638,7 +647,7 @@ export default function BMSPage() {
                   fontWeight: 600,
                   maxWidth: 580,
                   paddingBottom: 40,
-                  color: "#2d2d2db6",
+                  color: "#2d2d2dd1",
                 }}
               >
                 The landing page highlights how BuildMyStore makes it simple for
@@ -655,6 +664,8 @@ export default function BMSPage() {
                   muted
                   loop
                   playsInline
+                  onMouseEnter={(e) => e.currentTarget.pause()}
+                  onMouseLeave={(e) => e.currentTarget.play()}
                   style={{
                     width: "100%",
                     height: "100%",
@@ -690,9 +701,9 @@ export default function BMSPage() {
                 height: "clamp(480px,65vh, 900px)",
                 // width: "100%",
                 objectFit: "fill",
-                backgroundColor: "#f0f3e1be",
+                backgroundColor: "#ECE9E4",
                 borderRadius: 30,
-                padding: 40,
+                padding: 60,
                 margin: 20,
                 display: "flex",
                 alignItems: "center",
@@ -705,6 +716,8 @@ export default function BMSPage() {
                 muted
                 loop
                 playsInline
+                onMouseEnter={(e) => e.currentTarget.pause()}
+                onMouseLeave={(e) => e.currentTarget.play()}
                 style={{
                   width: "100%",
                   height: "100%",
@@ -721,7 +734,7 @@ export default function BMSPage() {
               display: "flex",
               alignItems: "start",
               justifyContent: "center",
-              margin: "80px 30px",
+              margin: " 0 80px 30px",
               fontSize: 19,
               fontFamily: "Lucida Sans, sans-serif",
             }}
@@ -782,7 +795,8 @@ export default function BMSPage() {
               display: "flex",
               alignItems: "start",
               justifyContent: "center",
-              margin: "80px 30px",
+              margin: "10px 80px 20px",
+              marginLeft: "20px",
               marginBottom: 30,
               fontSize: 19,
               fontFamily: "Lucida Sans, sans-serif",
@@ -836,11 +850,11 @@ export default function BMSPage() {
                 height: "clamp(480px,65vh, 900px)",
                 // width: "100%",
                 objectFit: "fill",
-                backgroundColor: "#f0f3e1be",
+                backgroundColor: "#ECE9E4",
                 borderRadius: 30,
-                padding: 40,
+                padding: "60px 80px",
                 margin: 20,
-                marginRight: -60,
+                marginRight: 40,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -852,6 +866,8 @@ export default function BMSPage() {
                 muted
                 loop
                 playsInline
+                onMouseEnter={(e) => e.currentTarget.pause()}
+                onMouseLeave={(e) => e.currentTarget.play()}
                 style={{
                   width: "100%",
                   height: "100%",
@@ -868,7 +884,7 @@ export default function BMSPage() {
             // display: "flex",
             position: "relative",
             backgroundColor: "#E6CE6C",
-            height: 910,
+            // height: 80,
             marginTop: 180,
           }}
         >
@@ -912,7 +928,7 @@ export default function BMSPage() {
                   fontWeight: 600,
                   maxWidth: 580,
                   paddingBottom: 40,
-                  color: "#2d2d2db6",
+                  color: "#2d2d2dd1",
                 }}
               >
                 All tools, features and product dtails are presented in a single
@@ -922,13 +938,23 @@ export default function BMSPage() {
             </div>
 
             <div style={{ width: "100%", margin: "10px auto 0" }}>
-              <div style={{ height: 710, borderRadius: 8, overflow: "hidden" }}>
+              <div
+                style={{
+                  height: 750,
+                  borderRadius: 0,
+                  overflow: "hidden",
+                  transform: "scaleY(1)",
+                  marginTop: 20,
+                }}
+              >
                 <video
                   src={bmsYellow}
                   autoPlay
                   muted
                   loop
                   playsInline
+                  onMouseEnter={(e) => e.currentTarget.pause()}
+                  onMouseLeave={(e) => e.currentTarget.play()}
                   style={{
                     width: "100%",
                     height: "100%",
@@ -946,20 +972,20 @@ export default function BMSPage() {
           className="flex flex-row"
           style={{ gap: 50, margin: "170px 50px 10px 50px" }}
         >
-          <div style={{ width: "60%" }}>
+          <div style={{ width: "55%" }}>
             <img src={trustEliments} alt="Trust Elements" />
           </div>
           <div
             style={{
-              width: "40%",
+              width: "45%",
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-start",
               justifyContent: "flex-start",
               gap: 30,
-              marginTop:"50px",
+              marginTop: "50px",
               fontFamily: "Lucida Sans, sans-serif",
-              fontSize: 21,
+              fontSize: 19,
               lineHeight: 1.9,
             }}
           >
@@ -982,7 +1008,6 @@ export default function BMSPage() {
                     alignItems: "flex-start",
                     marginBottom: "35px",
                     lineHeight: "1.9",
-                    
                   }}
                 >
                   <span style={{ marginRight: "12px" }}>•</span>
@@ -1002,7 +1027,7 @@ export default function BMSPage() {
           style={{
             // display: "flex",
             position: "relative",
-            backgroundColor: "#EF775E",
+            backgroundColor: "#F17568",
             height: 1050,
             marginTop: 180,
           }}
@@ -1011,7 +1036,7 @@ export default function BMSPage() {
             style={{
               width: "100%",
               objectFit: "cover",
-              backgroundColor: "#EF775E",
+              backgroundColor: "#F17568",
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-start",
@@ -1055,13 +1080,21 @@ export default function BMSPage() {
                 margin: "100px auto 0",
               }}
             >
-              <div style={{ borderRadius: 8, overflow: "hidden",transform:"scale(1.2)" }}>
+              <div
+                style={{
+                  borderRadius: 8,
+                  overflow: "hidden",
+                  transform: "scale(1.2)",
+                }}
+              >
                 <video
                   src={bmsRed}
                   autoPlay
                   muted
                   loop
                   playsInline
+                  onMouseEnter={(e) => e.currentTarget.pause()}
+                  onMouseLeave={(e) => e.currentTarget.play()}
                   style={{
                     width: "100%",
                     height: "100%",
