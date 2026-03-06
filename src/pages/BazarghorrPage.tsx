@@ -1966,7 +1966,7 @@ export default function BazarghorrPage() {
                   flex: "0 0 auto",
                   textAlign: "left",
 
-                  transform: "translateX(-120px)", // shifted further left
+                  transform: "translateX(-160px)", // shifted further left
                 }}
               >
                 OBJECTIVE
