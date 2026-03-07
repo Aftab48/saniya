@@ -337,7 +337,7 @@ export default function FooterSection({
           Built on coffee, love, many iterations, and way too many open tabs.
           Thanks for stopping by, hope to hear from you soon.
         </p>
-        <div className="absolute " style={{ left: 150, bottom: 22 }}>
+        <div className="absolute " style={{ left: 100, bottom: 22 }}>
           <button
             type="button"
             onClick={onBackToTop}

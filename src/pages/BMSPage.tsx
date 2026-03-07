@@ -32,12 +32,13 @@ import s10 from "@/assets/bms/s10a.jpeg";
 import s11 from "@/assets/bms/s11.jpeg";
 import s13 from "@/assets/bms/s13.png";
 import s15 from "@/assets/bms/Pasted image.png";
+
 //videos
 import s10v from "@/assets/bms/s10va.mp4";
 import s11v from "@/assets/bms/s11v.mp4";
 import bmsBlue from "@/assets/bms//bmsblue.mp4";
-import bmsGreen from "@/assets/bms//bmsgreen.mp4";
-import bmsYellow from "@/assets/bms//bmsyellow.mp4";
+import bmsGreen from "@/assets/bms/green.mp4";
+import bmsYellow from "@/assets/bms/yellow.mp4";
 import bmsRed from "@/assets/bms/red.mp4";
 
 function SectionImage({ src, alt }: { src: string; alt: string }) {
@@ -436,7 +437,7 @@ export default function BMSPage() {
           style={{
             // display: "flex",
             position: "relative",
-            backgroundColor: "#65a3d4",
+            backgroundColor: "#5EA0D8",
             height: 1050,
           }}
         >
@@ -480,8 +481,7 @@ export default function BMSPage() {
                   muted
                   loop
                   playsInline
-                  onMouseEnter={(e) => e.currentTarget.pause()}
-                  onMouseLeave={(e) => e.currentTarget.play()}
+                 
                   style={{
                     width: "100%",
                     height: "100%",
@@ -540,7 +540,7 @@ export default function BMSPage() {
           </div>
           <div></div>
 
-          <div style={{ transform: "scale(.7)" }}>
+          <div style={{ transform: "scale(.65)" }}>
             <SectionImage
               src={breakDown}
               alt="BMS Case Study - Breakdown of the Problem"
@@ -552,6 +552,7 @@ export default function BMSPage() {
           className="flex flex-row"
           style={{
             margin: "80px 80px 50px auto",
+            marginTop:-160,
             fontFamily: "Lucida Sans, sans-serif",
             fontSize: 18,
           }}
@@ -602,7 +603,7 @@ export default function BMSPage() {
             // display: "flex",
             position: "relative",
             backgroundColor: "#6baf74",
-            height: 810,
+            height: 910,
             marginBottom: 100,
           }}
         >
@@ -657,15 +658,14 @@ export default function BMSPage() {
             </div>
 
             <div style={{ width: "100%", margin: "10px auto 0" }}>
-              <div style={{ height: 600, borderRadius: 8, overflow: "hidden" }}>
+              <div style={{ height: 700, borderRadius: 8, overflow: "hidden" }}>
                 <video
                   src={bmsGreen}
                   autoPlay
                   muted
                   loop
                   playsInline
-                  onMouseEnter={(e) => e.currentTarget.pause()}
-                  onMouseLeave={(e) => e.currentTarget.play()}
+              
                   style={{
                     width: "100%",
                     height: "100%",
@@ -940,7 +940,7 @@ export default function BMSPage() {
             <div style={{ width: "100%", margin: "10px auto 0" }}>
               <div
                 style={{
-                  height: 750,
+                  height: 850,
                   borderRadius: 0,
                   overflow: "hidden",
                   transform: "scaleY(1)",
@@ -953,12 +953,11 @@ export default function BMSPage() {
                   muted
                   loop
                   playsInline
-                  onMouseEnter={(e) => e.currentTarget.pause()}
-                  onMouseLeave={(e) => e.currentTarget.play()}
+                  
                   style={{
                     width: "100%",
                     height: "100%",
-                    objectFit: "cover",
+                    objectFit: "fill",
                     display: "block",
                   }}
                 />
@@ -1093,8 +1092,7 @@ export default function BMSPage() {
                   muted
                   loop
                   playsInline
-                  onMouseEnter={(e) => e.currentTarget.pause()}
-                  onMouseLeave={(e) => e.currentTarget.play()}
+                 
                   style={{
                     width: "100%",
                     height: "100%",

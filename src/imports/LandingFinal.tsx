@@ -97,7 +97,7 @@ function LandingSections({
         <BackgroundSection containerRef={backgroundRef} />
       </div>
 
-      <div id="journey" style={{ width: "100%", transform: "scale(1.05)" }}>
+      <div  id="journey" style={{ width: "100%", transform: "scale(1.05)",padding:"60px 0" }}>
         <SectionImage src={journey} alt="My journey so far" />
       </div>
 
