@@ -716,8 +716,7 @@ export default function BMSPage() {
                 muted
                 loop
                 playsInline
-                onMouseEnter={(e) => e.currentTarget.pause()}
-                onMouseLeave={(e) => e.currentTarget.play()}
+            
                 style={{
                   width: "100%",
                   height: "100%",
@@ -866,8 +865,7 @@ export default function BMSPage() {
                 muted
                 loop
                 playsInline
-                onMouseEnter={(e) => e.currentTarget.pause()}
-                onMouseLeave={(e) => e.currentTarget.play()}
+               
                 style={{
                   width: "100%",
                   height: "100%",
