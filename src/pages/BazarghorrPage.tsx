@@ -1718,6 +1718,8 @@ function CustomerSection() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: 2250,
+          borderTopRightRadius:58,
+          borderTopLeftRadius:58,
         }}
       >
         {" "}

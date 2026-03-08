@@ -39,7 +39,7 @@ import s11v from "@/assets/bms/s11v.mp4";
 import bmsBlue from "@/assets/bms//bmsblue.mp4";
 import bmsGreen from "@/assets/bms/green.mp4";
 import bmsYellow from "@/assets/bms/yellow.mp4";
-import bmsRed from "@/assets/bms/red.mp4";
+import bmsRed from "@/assets/bms/redBms.mp4";
 
 function SectionImage({ src, alt }: { src: string; alt: string }) {
   return (
@@ -940,7 +940,8 @@ export default function BMSPage() {
             <div style={{ width: "100%", margin: "10px auto 0" }}>
               <div
                 style={{
-                  height: 850,
+                  height: 730,
+                  marginBottom: 100,
                   borderRadius: 0,
                   overflow: "hidden",
                   transform: "scaleY(1)",
@@ -1027,7 +1028,7 @@ export default function BMSPage() {
             // display: "flex",
             position: "relative",
             backgroundColor: "#F17568",
-            height: 1050,
+            padding:"40px 0",
             marginTop: 180,
           }}
         >
@@ -1076,14 +1077,18 @@ export default function BMSPage() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                margin: "100px auto 0",
+                margin: "0px auto ",
               }}
             >
               <div
                 style={{
-                  borderRadius: 8,
+                  borderRadius: 40,
                   overflow: "hidden",
-                  transform: "scale(1.2)",
+                  backgroundColor: "#f176681f",
+                  transform: "scale(1)",
+                  width: "80%",
+                  marginBottom:"40px"
+                  
                 }}
               >
                 <video
@@ -1096,8 +1101,10 @@ export default function BMSPage() {
                   style={{
                     width: "100%",
                     height: "100%",
+                    transform:"scaleX(1.19)",
                     objectFit: "cover",
                     display: "block",
+                    borderRadius: 8,
                   }}
                 />
               </div>

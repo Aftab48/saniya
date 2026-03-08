@@ -109,7 +109,7 @@ function ContactCard({ isActive, onHover }: ExpandableCardProps) {
   return (
     <div
       className={EXPANDABLE_CARD_BASE_CLASS}
-      style={{ width: isActive ? 465 : 170 }}
+      style={{ width: isActive ? 465 : 170,backgroundColor:isActive?"#2d6dc3":"transparent",color:isActive?"#fff":"#2d6dc3" }}
       onMouseEnter={onHover}
     >
       
@@ -129,7 +129,7 @@ function ContactCard({ isActive, onHover }: ExpandableCardProps) {
           <img alt="" className="h-full w-full object-contain" src={imgContactMe1} style={{transform:"scale(1.2)"}} />
         </div>
         <p
-          className="whitespace-nowrap  text-[24px] not-italic leading-[normal] text-[#2d6dc3] transition-opacity duration-300"
+          className="whitespace-nowrap  text-[24px] not-italic leading-[normal] transition-opacity duration-300"
           style={{ opacity: isActive ? 1 : 0,fontFamily: "Martel, serif", fontWeight: 800, marginLeft:22 }}
         >
           Let&apos;s Talk Design
