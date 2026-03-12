@@ -1724,8 +1724,8 @@ function CustomerSection() {
       ? 1200
       : windowWidth < 1024
         ? 1600
-        : windowWidth < 1440
-          ? 1850
+        : windowWidth < 1550
+          ? 1950
           : 2200;
 
   return (
