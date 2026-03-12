@@ -38,8 +38,8 @@ import s10v from "@/assets/bms/s10va.mp4";
 import s11v from "@/assets/bms/s11v.mp4";
 import bmsBlue from "@/assets/bms//bmsblue.mp4";
 import bmsGreen from "@/assets/bms/green.mp4";
-import bmsYellow from "@/assets/bms/yellow.mp4";
-import bmsRed from "@/assets/bms/redBms.mp4";
+import bmsYellow from "@/assets/bms/yellow2.mp4";
+import bmsRed from "@/assets/bms/red.mp4";
 
 function SectionImage({ src, alt }: { src: string; alt: string }) {
   return (
@@ -377,11 +377,7 @@ export default function BMSPage() {
               >
                 Who are we solving for
               </h2>
-              <p>
-                The initial round of discussion reaveled that the BuildMyStore
-                landing page lacked clear flow, marking tools and information
-                feel scattered and overwhelming.
-              </p>
+
             </div>
 
             <ul style={{ listStyle: "none", paddingLeft: 0 }}>
@@ -405,6 +401,11 @@ export default function BMSPage() {
               <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 30 }}>
                 What are we solving:{" "}
               </h2>
+                            <p style={{marginBottom:30}}>
+                The initial round of discussion reaveled that the BuildMyStore
+                landing page lacked clear flow, marking tools and information
+                feel scattered and overwhelming.
+              </p>
               <ul style={{ listStyle: "none", paddingLeft: 0 }}>
                 {solution.map((item, index) => (
                   <li
@@ -552,7 +553,7 @@ export default function BMSPage() {
           className="flex flex-row"
           style={{
             margin: "80px 80px 50px auto",
-            marginTop:-160,
+            marginTop:-60,
             fontFamily: "Lucida Sans, sans-serif",
             fontSize: 18,
           }}
@@ -877,7 +878,7 @@ export default function BMSPage() {
         </div>
         {/* section 12 */}
 
-        <div
+        {/* <div
           style={{
             // display: "flex",
             position: "relative",
@@ -938,7 +939,7 @@ export default function BMSPage() {
             <div style={{ width: "100%", margin: "10px auto 0" }}>
               <div
                 style={{
-                  height: 730,
+                  // height: 1130,
                   marginBottom: 100,
                   borderRadius: 0,
                   overflow: "hidden",
@@ -963,6 +964,23 @@ export default function BMSPage() {
               </div>
             </div>
           </div>
+        </div> */}
+
+        <div style={{width:"100%",marginTop:200}}>
+          <video
+                  src={bmsYellow}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+              
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    display: "block",
+                  }}
+                />
         </div>
 
         {/* section 13 */}
@@ -1084,7 +1102,7 @@ export default function BMSPage() {
                   overflow: "hidden",
                   backgroundColor: "#f176681f",
                   transform: "scale(1)",
-                  width: "80%",
+                  width: "90%",
                   marginBottom:"40px"
                   
                 }}
@@ -1099,7 +1117,7 @@ export default function BMSPage() {
                   style={{
                     width: "100%",
                     height: "100%",
-                    transform:"scaleX(1.19)",
+                    transform:"scaleX(1)",
                     objectFit: "cover",
                     display: "block",
                     borderRadius: 8,

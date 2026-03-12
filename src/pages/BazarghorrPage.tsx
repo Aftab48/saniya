@@ -186,10 +186,10 @@ function VendorAppUISection() {
         style={{
           maxWidth: 1800,
           margin: "0 auto",
-          padding: "0px 40px 80px",
+          padding: "30px 40px 80px",
         }}
       >
-        <SectionHeader number="09/10" title="VENDOR APP UI BREAKDOWN" />
+        <SectionHeader number="08/10" title="VENDOR APP UI BREAKDOWN" />
 
         <div
           style={{
@@ -290,59 +290,9 @@ function VendorAppUISection() {
 
 // ─── S11: Main Screens (CODED) ───────────────────────────────────────
 
-function GreenBlob({
-  size,
-  top,
-  left,
-  right,
-  opacity = 0.15,
-}: {
-  size: number;
-  top?: number | string;
-  left?: number | string;
-  right?: number | string;
-  opacity?: number;
-}) {
-  return (
-    <div
-      style={{
-        position: "absolute",
-        width: size,
-        height: size,
-        borderRadius: "50%",
-        background: `rgba(166, 227, 161, ${opacity})`,
-        top,
-        left,
-        right,
-        pointerEvents: "none",
-      }}
-    />
-  );
-}
 
-function ScreenThumbnail({
-  src,
-  alt,
-  width = 160,
-}: {
-  src: string;
-  alt: string;
-  width?: number;
-}) {
-  return (
-    <img
-      src={src}
-      alt={alt}
-      style={{
-        width,
-        borderRadius: 16,
-        boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
-        objectFit: "cover",
-      }}
-      loading="lazy"
-    />
-  );
-}
+
+
 
 function MainScreensSection() {
   return (
@@ -1032,7 +982,7 @@ function CustomerAppUISection() {
           padding: "0px 40px 80px",
         }}
       >
-        <SectionHeader number="09/10" title="CUSTOMER APP UI BREAKDOWN" />
+        <SectionHeader number="08/10" title="CUSTOMER APP UI BREAKDOWN" />
 
         <div
           style={{
@@ -1748,7 +1698,7 @@ function CustomerSection() {
       >
         {" "}
         <div style={{ padding: 50, top: 50 }}>
-          <SectionHeader dark={true} number="06/10" title="DASHBOARD" />
+          <SectionHeader dark={true} number="09/10" title="DASHBOARD" />
           <div
             style={{
               display: "flex",
@@ -1802,7 +1752,7 @@ function CustomerSection() {
 // ─── Main Page ───────────────────────────────────────────────────────
 
 export default function BazarghorrPage() {
-  const [vendorMode, setVendorMode] = React.useState(false);
+  const [vendorMode, setVendorMode] = React.useState(true);
   const [showButton, setShowButton] = React.useState(true);
   const [buttonVisible, setButtonVisible] = React.useState(true);
   const [showStickyButton, setShowStickyButton] = useState(false);

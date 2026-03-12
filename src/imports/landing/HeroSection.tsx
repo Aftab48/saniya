@@ -8,7 +8,7 @@ import imgMeIcon1 from "figma:asset/c86a38aafd6e5f2f41dab258742a41c31f635ea3.png
 import { Link } from "react-router-dom";
 
 const EXPANDABLE_CARD_BASE_CLASS =
-  "h-[140px] shrink-0 rounded-[48px] border border-solid border-[#2d6dc3] bg-[rgba(226,226,226,0.2)] transition-all duration-500 ease-in-out";
+  "h-[140px] shrink-0 rounded-[48px] border border-solid border-[#2d6dc3] bg-[rgba(226,226,226,0.2)] transition-all duration-500 ease-in-out ";
 
 type ExpandableCardProps = {
   isActive: boolean;
@@ -76,7 +76,7 @@ function LocationCard({ isActive, onHover }: ExpandableCardProps) {
   return (
     <div
       className={EXPANDABLE_CARD_BASE_CLASS}
-      style={{ width: isActive ? 450 : 170 }}
+      style={{ width: isActive ? 450 : 170,overflow:"hidden" }}
       onMouseEnter={onHover}
     >
       <div className="relative flex h-full items-center gap-5 ">
@@ -109,7 +109,7 @@ function ContactCard({ isActive, onHover }: ExpandableCardProps) {
   return (
     <div
       className={EXPANDABLE_CARD_BASE_CLASS}
-      style={{ width: isActive ? 465 : 170,backgroundColor:isActive?"#2d6dc3":"transparent",color:isActive?"#fff":"#2d6dc3" }}
+      style={{ width: isActive ? 465 : 170,backgroundColor:isActive?"#2d6dc3":"transparent",color:isActive?"#fff":"#2d6dc3",overflow:"hidden" }}
       onMouseEnter={onHover}
     >
       
