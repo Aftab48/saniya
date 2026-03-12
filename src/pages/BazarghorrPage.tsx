@@ -290,10 +290,6 @@ function VendorAppUISection() {
 
 // ─── S11: Main Screens (CODED) ───────────────────────────────────────
 
-
-
-
-
 function MainScreensSection() {
   return (
     <CaseStudyContainer
@@ -431,7 +427,7 @@ function MainScreensSection() {
             position: "relative",
             marginBottom: 250,
             marginTop: -200,
-            marginRight: "6%",
+            marginRight: "4%",
           }}
         >
           <div
@@ -484,19 +480,19 @@ function MainScreensSection() {
                 flexWrap: "wrap",
               }}
             >
-              <PhoneMockup width={230}>
+              <PhoneMockup width={225}>
                 <img
                   src={analytics1}
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}
                 />
               </PhoneMockup>
-              <PhoneMockup width={230}>
+              <PhoneMockup width={225}>
                 <img
                   src={analytics2}
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}
                 />
               </PhoneMockup>
-              <PhoneMockup width={230}>
+              <PhoneMockup width={225}>
                 <img
                   src={analytics3}
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}
@@ -1025,7 +1021,7 @@ function CustomerAppUISection() {
               style={{
                 position: "absolute",
                 top: -80,
-                right: -60,
+                right: -67,
                 width: 200,
                 height: 250,
 
@@ -1207,6 +1203,18 @@ function CustomerMainScreensSection() {
               .ba{
                 margin-right: -20%;
               }
+              .ba .ba-text {
+                margin-right: -27% !important;
+              }
+            }
+            @media (max-width: 1399px){
+              .ba{
+                margin-top: -500px !important;
+              }
+              .ba .ba-text {
+                margin-right: -33% !important;
+                max-width: 350px;
+              }
             }`}
           </style>
 
@@ -1230,12 +1238,14 @@ function CustomerMainScreensSection() {
               {/* <img src={customerOrder} alt="Customer order"  /> */}
               {/* Heading + paragraph right beside mockups */}
               <div
+                className="ba-text"
                 style={{
                   alignSelf: "flex-start",
                   textAlign: "right",
                   flex: 1,
-                  marginRight: "-27%",
+                  marginRight: "-25%",
                   marginTop: 200,
+                  minWidth: 300,
                 }}
               >
                 <h3
@@ -1395,7 +1405,7 @@ function CustomerMainScreensSection() {
             position: "relative",
             marginBottom: 80,
             marginTop: -200,
-            marginRight: "6%",
+            marginRight: "2%",
             zIndex: 9,
           }}
         >
@@ -1453,19 +1463,19 @@ function CustomerMainScreensSection() {
               alt="Order details"
               width={180}
             /> */}
-              <PhoneMockup width={240}>
+              <PhoneMockup width={228}>
                 <img
                   src={dashboardPage}
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}
                 />
               </PhoneMockup>
-              <PhoneMockup width={240}>
+              <PhoneMockup width={228}>
                 <img
                   src={searchPage}
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}
                 />
               </PhoneMockup>
-              <PhoneMockup width={240}>
+              <PhoneMockup width={228}>
                 <img
                   src={productPage}
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}
