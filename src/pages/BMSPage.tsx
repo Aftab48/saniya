@@ -36,7 +36,7 @@ import s15 from "@/assets/bms/Pasted image.png";
 //videos
 import s10v from "@/assets/bms/s10va.mp4";
 import s11v from "@/assets/bms/s11v.mp4";
-import bmsBlue from "@/assets/bms//bmsblue.mp4";
+import bmsBlue from "@/assets/bms/blue2.mp4";
 import bmsGreen from "@/assets/bms/green.mp4";
 import bmsYellow from "@/assets/bms/yellow2.mp4";
 import bmsRed from "@/assets/bms/red.mp4";
@@ -434,7 +434,7 @@ export default function BMSPage() {
 
         {/* Section -6 - breakdown of problem */}
 
-        <div
+        {/* <div
           style={{
             // display: "flex",
             position: "relative",
@@ -493,8 +493,25 @@ export default function BMSPage() {
               </div>
             </div>
           </div>
+        </div> */}
+        <div style={{width:"100%",marginTop:200}}>
+          <video
+                  src={bmsBlue}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+              
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    display: "block",
+                  }}
+                />
         </div>
 
+        {/* end section */}
         <div>
           <div
             className="flex flex-row "
