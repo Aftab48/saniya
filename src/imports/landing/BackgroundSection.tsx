@@ -20,8 +20,9 @@ type ProjectData = {
 
 const PROJECTS: ProjectData[] = [
   { image: imgBazarghorr, alt: "Bazarghorr — Hyperlocal Grocery App", link: "/bazarghorr" },
-{ image: imgBuildMyStore, alt: "BuildMyStore — All-in-One Ecommerce Platform", link: "/bms" },
-  { image: imgMentorMe, alt: "MentorMe — Purpose-Led Brand Identity", link: "/mentorme" },
+   { image: imgMentorMe, alt: "MentorMe — Purpose-Led Brand Identity", link: "/mentorme" },
+{ image: imgBuildMyStore, alt: "BuildMyStore — All-in-One Ecommerce Platform", link: "/bms" }
+ 
     
 ];
 
