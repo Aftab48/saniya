@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // @ts-ignore
 // import imgBackground from "figma:asset/59441181721f9ec0057cf0ca5351b45db44c073a.png";
 import imgBazarghorr from "@/assets/work/bazarghorr1.png";
-import imgBuildMyStore from "@/assets/work/bmsC.png";
+import imgBuildMyStore from "@/assets/work/bms1.png";
 import imgMentorMe from "@/assets/work/mentorme1.png";
 import newBackground from "@/assets/landing-work/blue-bg.png"
 // import journey from "@/assets/landing-work/journey.png"
@@ -20,9 +20,9 @@ type ProjectData = {
 
 const PROJECTS: ProjectData[] = [
   { image: imgBazarghorr, alt: "Bazarghorr — Hyperlocal Grocery App", link: "/bazarghorr" },
-
+{ image: imgBuildMyStore, alt: "BuildMyStore — All-in-One Ecommerce Platform", link: "/bms" },
   { image: imgMentorMe, alt: "MentorMe — Purpose-Led Brand Identity", link: "/mentorme" },
-    { image: imgBuildMyStore, alt: "BuildMyStore — All-in-One Ecommerce Platform", link: "/" }
+    
 ];
 
 
