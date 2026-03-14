@@ -1,10 +1,7 @@
-
-
-
 export type LandingNavigationHandlers = {
-  onHomeClick: ()=> void;
+  onHomeClick: () => void;
   onWorkClick: () => void;
   onAboutClick: () => void;
   onContactClick: () => void;
-  onResumeClick?: () => void; 
+  onResumeClick?: () => void;
 };

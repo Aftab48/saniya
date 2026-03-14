@@ -9,26 +9,12 @@ import dashboardPage from "@/assets/bazarghorr/screens/dashboard.png";
 import searchPage from "@/assets/bazarghorr/screens/search-page.png";
 import productPage from "@/assets/bazarghorr/screens/product-page.png";
 
-// Screen Images for Extras Page
-import profilePage from "@/assets/bazarghorr/screens/main-profile-page.png";
-import yourOrders from "@/assets/bazarghorr/screens/your-orders.png";
-import yourFav from "@/assets/bazarghorr/screens/your-favourites-3.png";
-import storePage from "@/assets/bazarghorr/screens/store-page.png";
-import savedAdress from "@/assets/bazarghorr/screens/saved-addresses-v2.png";
-// iphone images
-
-import ip18 from "@/assets/bazarghorr/screens/iphone 18.png";
-import ip19 from "@/assets/bazarghorr/screens/iphone 19.png";
-import ip20 from "@/assets/bazarghorr/screens/iphone 20.png";
-
 import vendorGroup from "@/assets/bazarghorr/illustrations/vendorGroup.png";
 
 import arrow from "@/assets/bazarghorr/arrow.png";
 // Section images
-// import s1 from "@/assets/bazarghorr/sections/s1.png";
 import s1a from "@/assets/bazarghorr/sections/s1b.png";
 
-import s2 from "@/assets/bazarghorr/sections/s2.png";
 import s3 from "@/assets/bazarghorr/sections/s3.png";
 import s4 from "@/assets/bazarghorr/sections/s4.png";
 import s5 from "@/assets/bazarghorr/sections/s5.png";
@@ -38,7 +24,7 @@ import s8 from "@/assets/bazarghorr/sections/s8.png";
 import s10 from "@/assets/bazarghorr/sections/s10.png";
 import s10a from "@/assets/bazarghorr/sections/s10a.png";
 import s10aBg from "@/assets/bazarghorr/sections/s10a-bg.png";
-import s13 from "@/assets/bazarghorr/sections/s13.png";
+
 import s14 from "@/assets/bazarghorr/sections/s14.png";
 
 // Videos
@@ -50,13 +36,10 @@ import customerFlow from "@/assets/bazarghorr/flows/customer-flow-screen-recordi
 import categoriesNavigation from "@/assets/bazarghorr/flows/categories-navigation.mp4";
 
 // Illustrations
-import maleVendor from "@/assets/bazarghorr/illustrations/excited.png";
 import maleVendorThinking from "@/assets/bazarghorr/illustrations/vendorThinking.png";
-import newOrderIllustration from "@/assets/bazarghorr/illustrations/new-order.png";
 import screenIllustration from "@/assets/bazarghorr/illustrations/screen-illustrations.png";
 import thinkingWoman from "@/assets/bazarghorr/illustrations/AuntyThinking.png";
 import customerOrder from "@/assets/bazarghorr/illustrations/phone-long.png";
-import exitedAunty from "@/assets/bazarghorr/illustrations/excited-aunty.png";
 import sparkle from "@/assets/bazarghorr/illustrations/sparkle.png";
 
 // Screens for s11
@@ -65,12 +48,6 @@ import analytics2 from "@/assets/bazarghorr/screens/analytics-2.png";
 import analytics3 from "@/assets/bazarghorr/screens/analytics-3.png";
 import orderHistory from "@/assets/bazarghorr/screens/order-history.png";
 import orderHistoryDetails from "@/assets/bazarghorr/screens/order-history-details-page.png";
-import dashboardActivity from "@/assets/bazarghorr/screens/dashboard-0-activity.png";
-import profileScreen from "@/assets/bazarghorr/screens/profile.png";
-import subscriptionScreen from "@/assets/bazarghorr/screens/subscription-page.png";
-import inventoryScreen from "@/assets/bazarghorr/screens/product-page.png";
-import vendorDashboard from "@/assets/bazarghorr/screens/vendordashboard.png";
-import maleVendorStanding from "@/assets/bazarghorr/illustrations/male-vendor-standing.jpeg";
 import auntyGroup from "@/assets/bazarghorr/illustrations/auntyGroup.png";
 
 // ─── Shared constants ────────────────────────────────────────────────
@@ -404,19 +381,6 @@ function MainScreensSection() {
                 Partner Details Are Shown, And Products Are Notified Once The
                 Order Is Completed While Continuing On The Dashboard.
               </p>
-
-              {/* <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-                <ScreenThumbnail
-                  src={newOrderIllustration}
-                  alt="New order"
-                  width={140}
-                />
-                <ScreenThumbnail
-                  src={vendorDashboard}
-                  alt="Vendor dashboard"
-                  width={140}
-                />
-              </div> */}
             </div>
           </div>
         </div>
@@ -604,14 +568,6 @@ function MainScreensSection() {
                 Stock, Or Out Of Stock. Vendors Can Easily Add New Products,
                 Edit Existing Items, And Update Stock Levels As Needed.
               </p>
-
-              {/* <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-                <ScreenThumbnail
-                  src={inventoryScreen}
-                  alt="Inventory"
-                  width={140}
-                />
-              </div> */}
             </div>
           </div>
         </div>
@@ -620,7 +576,6 @@ function MainScreensSection() {
         <div
           style={{
             position: "relative",
-            // marginBottom: 200,
             marginTop: -300,
             marginRight: "7%",
           }}
@@ -673,12 +628,6 @@ function MainScreensSection() {
                 flexWrap: "wrap",
               }}
             >
-              {/* <ScreenThumbnail src={orderHistory} alt="Order history" width={180} />
-            <ScreenThumbnail
-              src={orderHistoryDetails}
-              alt="Order details"
-              width={180}
-            /> */}
               <PhoneMockup width={230}>
                 <img
                   src={orderHistory}
@@ -750,78 +699,6 @@ function MainScreensSection() {
               alignItems: "center",
             }}
           >
-            {/* <ScreenThumbnail
-              src={dashboardActivity}
-              alt="Activity dashboard"
-              width={180}
-            />
-            <img
-              src={maleVendorStanding}
-              alt="Vendor character"
-              style={{
-                width: 80,
-                borderRadius: 40,
-                objectFit: "cover",
-              }}
-              loading="lazy"
-            />
-            <ScreenThumbnail
-              src={profileScreen}
-              alt="Profile"
-              width={180}
-            />
-            <ScreenThumbnail
-              src={subscriptionScreen}
-              alt="Subscription"
-              width={180}
-            /> */}
-
-            {/* <PhoneMockup width={316}>
-              <img
-                src={dashboardActivity}
-                alt="Activity dashboard"
-                style={{ objectFit: "fill", width: "100%", height: "100%" }}
-              />
-            </PhoneMockup>
-            <PhoneMockup width={316}>
-              <img
-                src={profileScreen}
-                alt="Profile screen"
-                style={{ objectFit: "cover", width: "100%", height: "100%" }}
-              />
-            </PhoneMockup> */}
-            {/* <img src={ip19} style={{ objectFit: "cover", height: 770 }} />
-            <img src={ip18} style={{ objectFit: "cover", height: 770 }} />
-            <div
-              className="absolute"
-              style={{ zIndex: -1, top: -50, right: "17%" }}
-            >
-              <img
-                src={maleVendor}
-                alt="Vendor character"
-                style={{
-                  width: 207,
-                  height: 293,
-                  borderRadius: 40,
-                  objectFit: "cover",
-                  zIndex: -5,
-                }}
-                loading="lazy"
-              />
-            </div> */}
-
-            {/* <PhoneMockup width={316}>
-              <img
-                src={subscriptionScreen}
-                alt="Subscription screen"
-                style={{
-                  objectFit: "fill",
-                  width: "100%",
-                  height: "100%",
-                  zIndex: 10,
-                }}
-              />
-            </PhoneMockup> */}
             <img
               src={vendorGroup}
               style={{ objectFit: "cover", width: "68%" }}
@@ -834,118 +711,8 @@ function MainScreensSection() {
 }
 
 function VendorSection() {
-  // const [vendorMode, setVendorMode] = React.useState(true);
-  // const [showButton, setShowButton] = React.useState(true);
-
   return (
     <div style={{ overflow: "hidden" }}>
-      {/* {showButton && (
-        <div
-          style={{
-            position: "sticky",
-            top: 20,
-            zIndex: 20,
-            display: "flex",
-            justifyContent: "flex-end",
-            paddingRight: 40,
-          }}
-        >
-          <button
-            onClick={() => setVendorMode(!vendorMode)}
-            className=""
-            style={{
-              width: 226,
-              height: "auto",
-              backgroundColor: vendorMode ? "#0C582B" : "#33302F",
-              color: "white",
-              padding: 10,
-              display: "flex",
-              gap: 0,
-              zIndex: 15,
-              marginBottom: 0,
-              marginLeft: 230,
-              fontSize: 20,
-              borderRadius: 40,
-              position: "relative",
-            }}
-          >
-            {vendorMode ? (
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  gap: 18,
-                  marginLeft: 9,
-                }}
-              >
-                <h3 style={{ margin: 0 }}>Customer App</h3>
-                <svg
-                  style={{ transform: "scale(-1)" }}
-                  width="44"
-                  height="44"
-                  viewBox="0 0 44 44"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="21.8457"
-                    cy="21.8458"
-                    r="21.2553"
-                    stroke="#F9F9F9"
-                    strokeWidth="1.18085"
-                  />
-                  <path
-                    d="M33.8987 22.0909C34.3598 21.6298 34.3598 20.8821 33.8987 20.421L26.3838 12.9061C25.9226 12.4449 25.1749 12.4449 24.7138 12.9061C24.2526 13.3672 24.2526 14.1149 24.7138 14.576L31.3937 21.2559L24.7138 27.9358C24.2526 28.397 24.2526 29.1447 24.7138 29.6058C25.1749 30.067 25.9226 30.067 26.3838 29.6058L33.8987 22.0909ZM31.8828 21.2559L31.8828 22.4368L33.0637 22.4368L33.0637 21.2559L33.0637 20.0751L31.8828 20.0751L31.8828 21.2559Z"
-                    fill="#F9F9F9"
-                  />
-                  <path
-                    d="M22.0901 22.0909C22.5512 21.6298 22.5512 20.8821 22.0901 20.421L14.5752 12.9061C14.114 12.4449 13.3663 12.4449 12.9052 12.9061C12.444 13.3672 12.444 14.1149 12.9052 14.576L19.5851 21.2559L12.9052 27.9358C12.444 28.397 12.444 29.1447 12.9052 29.6058C13.3663 30.067 14.114 30.067 14.5752 29.6058L22.0901 22.0909ZM20.0742 21.2559L20.0742 22.4368L21.2551 22.4368L21.2551 21.2559L21.2551 20.0751L20.0742 20.0751L20.0742 21.2559Z"
-                    fill="#F9F9F9"
-                  />
-                </svg>
-              </div>
-            ) : (
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  gap: 18,
-                  marginLeft: 9,
-                }}
-              >
-                <svg
-                  style={{ transform: "scale(-1)" }}
-                  width="44"
-                  height="44"
-                  viewBox="0 0 44 44"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="21.8457"
-                    cy="21.8458"
-                    r="21.2553"
-                    stroke="#F9F9F9"
-                    strokeWidth="1.18085"
-                  />
-                  <path
-                    d="M33.8987 22.0909C34.3598 21.6298 34.3598 20.8821 33.8987 20.421L26.3838 12.9061C25.9226 12.4449 25.1749 12.4449 24.7138 12.9061C24.2526 13.3672 24.2526 14.1149 24.7138 14.576L31.3937 21.2559L24.7138 27.9358C24.2526 28.397 24.2526 29.1447 24.7138 29.6058C25.1749 30.067 25.9226 30.067 26.3838 29.6058L33.8987 22.0909ZM31.8828 21.2559L31.8828 22.4368L33.0637 22.4368L33.0637 21.2559L33.0637 20.0751L31.8828 20.0751L31.8828 21.2559Z"
-                    fill="#F9F9F9"
-                  />
-                  <path
-                    d="M22.0901 22.0909C22.5512 21.6298 22.5512 20.8821 22.0901 20.421L14.5752 12.9061C14.114 12.4449 13.3663 12.4449 12.9052 12.9061C12.444 13.3672 12.444 14.1149 12.9052 14.576L19.5851 21.2559L12.9052 27.9358C12.444 28.397 12.444 29.1447 12.9052 29.6058C13.3663 30.067 14.114 30.067 14.5752 29.6058L22.0901 22.0909ZM20.0742 21.2559L20.0742 22.4368L21.2551 22.4368L21.2551 21.2559L21.2551 20.0751L20.0742 20.0751L20.0742 21.2559Z"
-                    fill="#F9F9F9"
-                  />
-                </svg>
-                <h3 style={{ marginLeft: 5 }}>Vendor App</h3>
-              </div>
-            )}
-          </button>
-        </div>
-      )} */}
-
       <VendorAppUISection />
       <CaseStudyContainer
         variant="dark"
@@ -1235,7 +1002,6 @@ function CustomerMainScreensSection() {
                 gap: 42,
               }}
             >
-              {/* <img src={customerOrder} alt="Customer order"  /> */}
               {/* Heading + paragraph right beside mockups */}
               <div
                 className="ba-text"
@@ -1280,15 +1046,7 @@ function CustomerMainScreensSection() {
               </div>
 
               {/* Phone mockups */}
-              <div
-                style={
-                  {
-                    // display: "flex",
-                    // gap: 20,
-                    // flexWrap: "wrap",
-                  }
-                }
-              >
+              <div>
                 <img
                   src={customerOrder}
                   alt="Customer order"
@@ -1387,14 +1145,6 @@ function CustomerMainScreensSection() {
                 Tracking Keeps Users Informed About Order Status, Delivery
                 Progress, And Completion.
               </p>
-
-              {/* <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-                <ScreenThumbnail
-                  src={inventoryScreen}
-                  alt="Inventory"
-                  width={140}
-                />
-              </div> */}
             </div>
           </div>
         </div>
@@ -1457,12 +1207,6 @@ function CustomerMainScreensSection() {
                 flexWrap: "wrap",
               }}
             >
-              {/* <ScreenThumbnail src={orderHistory} alt="Order history" width={180} />
-            <ScreenThumbnail
-              src={orderHistoryDetails}
-              alt="Order details"
-              width={180}
-            /> */}
               <PhoneMockup width={228}>
                 <img
                   src={dashboardPage}
@@ -1590,75 +1334,6 @@ function CustomerMainScreensSection() {
               alignItems: "center",
             }}
           >
-            {/* <PhoneMockup width={250}>
-              <img
-                src={profilePage}
-                alt="Activity dashboard"
-                style={{ objectFit: "fill", width: "100%", height: "100%" }}
-              />
-            </PhoneMockup>
-            <PhoneMockup width={250}>
-              <img
-                src={yourOrders}
-                alt="Profile screen"
-                style={{ objectFit: "cover", width: "100%", height: "100%" }}
-              />
-            </PhoneMockup>
-            <div
-              className="absolute"
-              style={{ zIndex: -1, top: 30, right: "2%" }}
-            >
-              <img
-                src={exitedAunty}
-                alt="Vendor character"
-                style={{
-                  width: 267,
-                  height: 350,
-                  borderRadius: 40,
-                  objectFit: "cover",
-                  zIndex: 10,
-                  overflow: "visible",
-                }}
-                loading="lazy"
-              />
-            </div>
-
-            <PhoneMockup width={250}>
-              <img
-                src={yourFav}
-                alt="Subscription screen"
-                style={{
-                  objectFit: "fill",
-                  width: "100%",
-                  height: "100%",
-                  zIndex: 10,
-                }}
-              />
-            </PhoneMockup>
-            <PhoneMockup width={250}>
-              <img
-                src={storePage}
-                alt="Store page"
-                style={{
-                  objectFit: "fill",
-                  width: "100%",
-                  height: "100%",
-                  zIndex: 10,
-                }}
-              />
-            </PhoneMockup>
-            <PhoneMockup width={250}>
-              <img
-                src={savedAdress}
-                alt="Saved addresses screen"
-                style={{
-                  objectFit: "fill",
-                  width: "100%",
-                  height: "100%",
-                  zIndex: 10,
-                }}
-              />
-            </PhoneMockup> */}
             <img
               src={auntyGroup}
               style={{ objectFit: "cover", width: "91%", marginTop: -100 }}
@@ -1752,7 +1427,6 @@ function CustomerSection() {
             />
           </div>
         </div>
-        {/* <SectionImage src={s10aBg} alt="Dashboard" /> */}
       </CaseStudyContainer>
       <CustomerMainScreensSection />
     </div>
@@ -1809,14 +1483,11 @@ export default function BazarghorrPage() {
     });
   };
 
-  // When showButton becomes true, make button visible again
-
   useEffect(() => {
     const metadata = {
       title: "Bazarghorr: Hyperlocal Grocery App Design Case Study",
       description:
         "Portfolio of Saniya — case studies, selected work, and contact.",
-      // image: String(journey),
     };
 
     document.title = metadata.title;
@@ -1825,7 +1496,6 @@ export default function BazarghorrPage() {
         const isIntersecting = entry.isIntersecting;
         setFooterIntersecting(isIntersecting);
         if (isIntersecting) {
-          // ensure button is hidden immediately while footer is visible
           setButtonAnimating(false);
           setShowButton(false);
           setButtonVisible(false);
@@ -1849,12 +1519,7 @@ export default function BazarghorrPage() {
     };
   }, []);
 
-  // useEffect(() => {
-  //   if (showButton) setButtonVisible(true);
-  // }, [showButton]);
-
   useEffect(() => {
-    // only make visible when not inside footer
     if (showButton && !footerIntersecting) setButtonVisible(true);
     else setButtonVisible(false);
   }, [showButton, footerIntersecting]);
@@ -1876,13 +1541,10 @@ export default function BazarghorrPage() {
       id="top"
       className="bazarghorr-page"
       style={{
-        // width: "100%",
         maxWidth: "100%",
         minHeight: "100vh",
         background: "#fefcf4",
         marginTop: 0,
-
-        // overflowX: "hidden",
       }}
     >
       {/* s1: Hero — rectangular, light bg */}
@@ -1956,7 +1618,7 @@ export default function BazarghorrPage() {
                   flex: "0 0 auto",
                   textAlign: "left",
 
-                  transform: "translateX(-160px)", // shifted further left
+                  transform: "translateX(-160px)",
                 }}
               >
                 OBJECTIVE
@@ -2134,8 +1796,8 @@ export default function BazarghorrPage() {
           zIndex={11}
           style={{
             position: "relative",
-            marginTop: -120, // negative margin to overlap
-            zIndex: 4, // higher z-index
+            marginTop: -120,
+            zIndex: 4,
             borderTopLeftRadius: 48,
             borderTopRightRadius: 48,
             boxShadow: "0 -8px 32px rgba(0,0,0,0.08)",

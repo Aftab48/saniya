@@ -25,13 +25,23 @@ type HeroSectionProps = {
 function HeroHeading() {
   return (
     <div className="-translate-x-1/2 -translate-y-1/2 absolute contents left-1/2 top-[calc(50%-367.5px)] not-italic">
-      <div className="absolute left-[calc(50%-832px)] top-[calc(50%-312px)] whitespace-nowrap font-['Clash_Display:Bold',sans-serif]  leading-[1.03] tracking-[9.889px] text-[#101010] text-[100.816px]"
-      style={{ fontFamily: "ClashDisplay, sans-serif", fontWeight: 600,fontSize:160.6 }}>
-        <p className="" style={{wordSpacing:16}}>DIGITAL  PRODUCT</p>
-        <p style={{wordSpacing:24,marginRight:5}}>DESIGNER</p>
+      <div
+        className="absolute left-[calc(50%-832px)] top-[calc(50%-312px)] whitespace-nowrap font-['Clash_Display:Bold',sans-serif]  leading-[1.03] tracking-[9.889px] text-[#101010] text-[100.816px]"
+        style={{
+          fontFamily: "ClashDisplay, sans-serif",
+          fontWeight: 600,
+          fontSize: 160.6,
+        }}
+      >
+        <p className="" style={{ wordSpacing: 16 }}>
+          DIGITAL PRODUCT
+        </p>
+        <p style={{ wordSpacing: 24, marginRight: 5 }}>DESIGNER</p>
       </div>
-      <p className="absolute left-[calc(50%-832px)] top-[calc(50%-343px)] ml-5  text-[16px] leading-[normal] tracking-[0.48px] text-[#2d6dc3] text-[16px]"
-      style={{ fontWeight: 800,fontFamily: "Martel, serif" }}>
+      <p
+        className="absolute left-[calc(50%-832px)] top-[calc(50%-343px)] ml-5  text-[16px] leading-[normal] tracking-[0.48px] text-[#2d6dc3] text-[16px]"
+        style={{ fontWeight: 800, fontFamily: "Martel, serif" }}
+      >
         <span className="block px-4">
           USERINTERFACE | USEREXPERIENCE | VISUAL IDENTITY
         </span>
@@ -52,7 +62,11 @@ function ProfileCard({ isActive, onHover }: ExpandableCardProps) {
           className={`relative z-10 flex shrink-0 items-center justify-center transition-all duration-500 ${
             isActive ? "h-[180px] w-[170px]" : "h-[110px] w-[100px]"
           }`}
-          style={{ transform: isActive ? "translateX(-170px) translateY(-10px)" : "translateX(0)" }}
+          style={{
+            transform: isActive
+              ? "translateX(-170px) translateY(-10px)"
+              : "translateX(0)",
+          }}
           data-name="me icon"
         >
           <img
@@ -63,7 +77,12 @@ function ProfileCard({ isActive, onHover }: ExpandableCardProps) {
         </div>
         <p
           className="absolute left-[170px] whitespace-nowrap  text-[24px] not-italic leading-[normal] text-[#2d6dc3] transition-opacity duration-100"
-          style={{ opacity: isActive ? 1 : 0,fontFamily: "Martel, serif", fontWeight: 800,marginLeft:-18 }}
+          style={{
+            opacity: isActive ? 1 : 0,
+            fontFamily: "Martel, serif",
+            fontWeight: 800,
+            marginLeft: -18,
+          }}
         >
           HELLO! I&apos;M SANIYA
         </p>
@@ -76,19 +95,29 @@ function LocationCard({ isActive, onHover }: ExpandableCardProps) {
   return (
     <div
       className={EXPANDABLE_CARD_BASE_CLASS}
-      style={{ width: isActive ? 450 : 170,overflow:"hidden" }}
+      style={{ width: isActive ? 450 : 170, overflow: "hidden" }}
       onMouseEnter={onHover}
     >
       <div className="relative flex h-full items-center gap-5 ">
         <div
           className="relative flex h-[170px] w-[170px] shrink-0 items-center justify-center"
-          data-name="location png" 
+          data-name="location png"
         >
-          <img alt="" className="h-full w-full object-cover" src={imgLocationPng1} style={{transform:"scale(1.1"}} />
+          <img
+            alt=""
+            className="h-full w-full object-cover"
+            src={imgLocationPng1}
+            style={{ transform: "scale(1.1" }}
+          />
         </div>
         <p
           className="whitespace-nowrap text-[24px] not-italic leading-[normal] text-[#2d6dc3] transition-opacity duration-300"
-          style={{ opacity: isActive ? 1 : 0,fontFamily: "Martel, serif", fontWeight: 800,marginLeft:-25 }}
+          style={{
+            opacity: isActive ? 1 : 0,
+            fontFamily: "Martel, serif",
+            fontWeight: 800,
+            marginLeft: -25,
+          }}
         >
           Ahmedabad | Pune
         </p>
@@ -98,7 +127,7 @@ function LocationCard({ isActive, onHover }: ExpandableCardProps) {
 }
 
 function ContactCard({ isActive, onHover }: ExpandableCardProps) {
-    const goContact = () => {
+  const goContact = () => {
     const el = document.getElementById("contact");
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -109,13 +138,18 @@ function ContactCard({ isActive, onHover }: ExpandableCardProps) {
   return (
     <div
       className={EXPANDABLE_CARD_BASE_CLASS}
-      style={{ width: isActive ? 465 : 170,backgroundColor:isActive?"#2d6dc3":"transparent",color:isActive?"#fff":"#2d6dc3",overflow:"hidden" }}
+      style={{
+        width: isActive ? 465 : 170,
+        backgroundColor: isActive ? "#2d6dc3" : "transparent",
+        color: isActive ? "#fff" : "#2d6dc3",
+        overflow: "hidden",
+      }}
       onMouseEnter={onHover}
     >
-      
-      <div className="relative flex h-full items-center gap-5 pl-[10px] cursor-pointer" 
-      // style={{pointerEvents:""}}
-      role="button"
+      <div
+        className="relative flex h-full items-center gap-5 pl-[10px] cursor-pointer"
+        // style={{pointerEvents:""}}
+        role="button"
         tabIndex={0}
         onClick={goContact}
         onKeyDown={(e) => {
@@ -126,16 +160,25 @@ function ContactCard({ isActive, onHover }: ExpandableCardProps) {
           className="relative flex h-[135px] w-[135px] shrink-0 items-center justify-center"
           data-name="contact me"
         >
-          <img alt="" className="h-full w-full object-contain" src={imgContactMe1} style={{transform:"scale(1.2)"}} />
+          <img
+            alt=""
+            className="h-full w-full object-contain"
+            src={imgContactMe1}
+            style={{ transform: "scale(1.2)" }}
+          />
         </div>
         <p
           className="whitespace-nowrap  text-[24px] not-italic leading-[normal] transition-opacity duration-300"
-          style={{ opacity: isActive ? 1 : 0,fontFamily: "Martel, serif", fontWeight: 800, marginLeft:22 }}
+          style={{
+            opacity: isActive ? 1 : 0,
+            fontFamily: "Martel, serif",
+            fontWeight: 800,
+            marginLeft: 22,
+          }}
         >
           Let&apos;s Talk Design
         </p>
       </div>
-      
     </div>
   );
 }
@@ -149,12 +192,18 @@ function IntroCards() {
   return (
     <div
       className="absolute  flex gap-[7px] p-30"
-      style={{ top: 210,left:885, transform: "scale(0.85)" }}
+      style={{ top: 210, left: 885, transform: "scale(0.85)" }}
       data-name="Component 1"
       onMouseLeave={activateProfile}
     >
-      <ProfileCard isActive={activeCard === "profile"} onHover={activateProfile} />
-      <LocationCard isActive={activeCard === "location"} onHover={activateLocation} />
+      <ProfileCard
+        isActive={activeCard === "profile"}
+        onHover={activateProfile}
+      />
+      <LocationCard
+        isActive={activeCard === "location"}
+        onHover={activateLocation}
+      />
       <ContactCard isActive={activeCard === "phone"} onHover={activatePhone} />
     </div>
   );
@@ -172,7 +221,7 @@ export default function HeroSection({
     <div
       ref={containerRef}
       className="relative sticky top-[200px] h-[780px] w-full shrink-0 overflow-visible"
-      style={{top:340}}
+      style={{ top: 340 }}
     >
       <div
         className="relative h-full w-full"
@@ -194,10 +243,10 @@ export default function HeroSection({
           style={{ top: "500px", fontWeight: 800, fontFamily: "Martel, serif" }}
         >
           <p className="mb-0">
-            Designing meaningful experiences where every interaction is crafted with
-            purpose,
+            Designing meaningful experiences where every interaction is crafted
+            with purpose,
           </p>
-          <p >From head scratching moments to flows that just make sense.</p>
+          <p>From head scratching moments to flows that just make sense.</p>
         </div>
       </div>
     </div>

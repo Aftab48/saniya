@@ -24,7 +24,7 @@ export default function MentorMePage() {
   const [linkHovered, setLinkHovered] = useState(false);
   const navigate = useNavigate();
   const goHome = () => navigate("/");
-    const goTop = () => {
+  const goTop = () => {
     const el = document.getElementById("top");
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -33,10 +33,10 @@ export default function MentorMePage() {
     }
   };
   useEffect(() => {
-       const metadata = {
-        title: 'MentorMe: Purpose-Led Brand Identity Design Case Study',
-      description: 'Portfolio of Saniya — case studies, selected work, and contact.',
-      // image: String(journey),
+    const metadata = {
+      title: "MentorMe: Purpose-Led Brand Identity Design Case Study",
+      description:
+        "Portfolio of Saniya — case studies, selected work, and contact.",
     };
 
     document.title = metadata.title;
@@ -74,7 +74,7 @@ export default function MentorMePage() {
               gap: 10,
               padding: "12px 28px",
               borderRadius: 40,
-               border: "1px solid rgba(58, 122, 254, 0.65)",
+              border: "1px solid rgba(58, 122, 254, 0.65)",
               background: "rgba(58, 122, 254, 0.65)",
               color: "#FEF9F6",
               backdropFilter: "blur(4px)",
@@ -82,7 +82,7 @@ export default function MentorMePage() {
               cursor: "pointer",
               fontFamily: "'Martel:ExtraBold', sans-serif",
               fontSize: 18,
-             
+
               letterSpacing: 0.5,
             }}
           >
@@ -120,19 +120,18 @@ export default function MentorMePage() {
             View Brand Book
           </a>
         </div>
-        
-        <SectionImage src={t2} alt="MentorMe Case Study - Section 3" />
 
+        <SectionImage src={t2} alt="MentorMe Case Study - Section 3" />
 
         {/* Section 2 */}
 
-          <div
+        <div
           style={{
             display: "flex",
             position: "relative",
             margin: "30px 0px",
-            marginTop:60,
-            // height: 400,
+            marginTop: 60,
+
             backgroundColor: "rgba(0, 0, 0, 0.87)",
           }}
         >
@@ -141,29 +140,29 @@ export default function MentorMePage() {
               width: "100%",
               height: 620,
               objectFit: "fill",
-              // backgroundColor: "rgba(0, 0, 0, 0.87)",
+
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
             }}
           >
             <video
-                src={mmvideo}
-                autoPlay
-                muted
-                loop
-                playsInline
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                }}
-              />
+              src={mmvideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
           </div>
         </div>
 
         {/* Section 3 */}
-                <div style={{ position: "relative" }}>
+        <div style={{ position: "relative" }}>
           <div>
             <CaseStudyContainer
               variant="light"
@@ -183,25 +182,23 @@ export default function MentorMePage() {
         </div>
 
         {/* Footer Section */}
-                <div
-                  
-                  style={{
-                    marginBottom: 0,
-                    position: "relative",
-                    zIndex: 10,
-                    marginTop: -160,
-                    overflow: "visible",
-                    transform: "scale(0.8)",
-                    height: 1000,
-                  }}
-                >
-                  {/* <SectionImage src={s13} alt="Footer" /> */}
-                  <FooterSection
-                    useBgImage={true}
-                    onBackToTop={goTop}
-                    onLetsTalkClick={() => {}}
-                  />
-                </div>
+        <div
+          style={{
+            marginBottom: 0,
+            position: "relative",
+            zIndex: 10,
+            marginTop: -160,
+            overflow: "visible",
+            transform: "scale(0.8)",
+            height: 1000,
+          }}
+        >
+          <FooterSection
+            useBgImage={true}
+            onBackToTop={goTop}
+            onLetsTalkClick={() => {}}
+          />
+        </div>
       </div>
     </div>
   );

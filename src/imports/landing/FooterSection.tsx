@@ -139,7 +139,6 @@ function LetsTalkLabelLine({ useBgImage }: { useBgImage: boolean }) {
   return (
     <Link to="mailto:saniya.inamdar2018@gmail.com">
       <div className="relative flex h-[54px] items-center justify-center">
-        
         <p
           className="absolute left-[calc(50%-100px)] text-[32px] not-italic leading-[normal]"
           style={{
@@ -166,10 +165,8 @@ function LetsTalkLabelLine({ useBgImage }: { useBgImage: boolean }) {
             </svg>
           </div>
         </div>
-         
       </div>
-      </Link>
-   
+    </Link>
   );
 }
 

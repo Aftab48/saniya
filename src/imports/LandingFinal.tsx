@@ -97,7 +97,10 @@ function LandingSections({
         <BackgroundSection containerRef={backgroundRef} />
       </div>
 
-      <div  id="journey" style={{ width: "100%", transform: "scale(1.05)",padding:"60px 0" }}>
+      <div
+        id="journey"
+        style={{ width: "100%", transform: "scale(1.05)", padding: "60px 0" }}
+      >
         <SectionImage src={journey} alt="My journey so far" />
       </div>
 
@@ -163,18 +166,15 @@ export default function LandingFinal({
       title: "Saniya — Product & Visual Designer",
       description:
         "Portfolio of Saniya — case studies, selected work, and contact.",
-      image: String(journey),
     };
 
     document.title = metadata.title;
     updateMeta("name", "description", metadata.description);
     updateMeta("property", "og:title", metadata.title);
     updateMeta("property", "og:description", metadata.description);
-    updateMeta("property", "og:image", metadata.image);
     updateMeta("name", "twitter:card", "summary_large_image");
     updateMeta("name", "twitter:title", metadata.title);
     updateMeta("name", "twitter:description", metadata.description);
-    updateMeta("name", "twitter:image", metadata.image);
 
     return () => {
       document.title = prevTitle;

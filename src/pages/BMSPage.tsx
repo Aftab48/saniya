@@ -295,7 +295,9 @@ export default function BMSPage() {
             </div>
 
             <Link to={"/"}>
-              <p style={{ textDecoration: "underline",fontWeight: 600 }}>View Prototype</p>
+              <p style={{ textDecoration: "underline", fontWeight: 600 }}>
+                View Prototype
+              </p>
             </Link>
           </div>
         </div>
@@ -377,7 +379,6 @@ export default function BMSPage() {
               >
                 Who are we solving for
               </h2>
-
             </div>
 
             <ul style={{ listStyle: "none", paddingLeft: 0 }}>
@@ -397,11 +398,11 @@ export default function BMSPage() {
               ))}
             </ul>
 
-            <div style={{marginTop:"-10px"}}>
+            <div style={{ marginTop: "-10px" }}>
               <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 30 }}>
                 What are we solving:{" "}
               </h2>
-                            <p style={{marginBottom:30}}>
+              <p style={{ marginBottom: 30 }}>
                 The initial round of discussion reaveled that the BuildMyStore
                 landing page lacked clear flow, marking tools and information
                 feel scattered and overwhelming.
@@ -434,81 +435,20 @@ export default function BMSPage() {
 
         {/* Section -6 - breakdown of problem */}
 
-        {/* <div
-          style={{
-            // display: "flex",
-            position: "relative",
-            backgroundColor: "#5EA0D8",
-            height: 1050,
-          }}
-        >
-          <div
+        <div style={{ width: "100%", marginTop: 200 }}>
+          <video
+            src={bmsBlue}
+            autoPlay
+            muted
+            loop
+            playsInline
             style={{
               width: "100%",
+              height: "100%",
               objectFit: "cover",
-              backgroundColor: "#5EA0D8",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-              justifyContent: "flex-start",
-              padding: "0px",
+              display: "block",
             }}
-          >
-            <p
-              style={{
-                margin: "0 0 20px 0",
-                fontSize: 20,
-                fontWeight: 700,
-                fontFamily: "Lucida Sans, sans-serif",
-                padding: "40px",
-              }}
-            >
-              Gaps in existing design
-            </p>
-
-            <div style={{ width: "100%", marginTop: 10 }}>
-              <div
-                style={{
-                  height: "clamp(660px, 85vh, 950px)",
-                  borderRadius: 8,
-                  overflow: "hidden",
-                  transform: "none",
-                  backgroundColor: "#5EA0D8",
-                }}
-              >
-                <video
-                  src={bmsBlue}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                 
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        </div> */}
-        <div style={{width:"100%",marginTop:200}}>
-          <video
-                  src={bmsBlue}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-              
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                  }}
-                />
+          />
         </div>
 
         {/* end section */}
@@ -570,7 +510,7 @@ export default function BMSPage() {
           className="flex flex-row"
           style={{
             margin: "80px 80px 50px auto",
-            marginTop:-60,
+            marginTop: -60,
             fontFamily: "Lucida Sans, sans-serif",
             fontSize: 18,
           }}
@@ -608,13 +548,6 @@ export default function BMSPage() {
             </div>
           </div>
         </div>
-
-        {/* section 7 */}
-        {/* <SectionImage src={s3a} alt="BMS Case Study - Section 7" /> */}
-
-        {/* section 8 */}
-
-        {/* section 9 */}
 
         <div
           style={{
@@ -683,7 +616,6 @@ export default function BMSPage() {
                   muted
                   loop
                   playsInline
-              
                   style={{
                     width: "100%",
                     height: "100%",
@@ -734,7 +666,6 @@ export default function BMSPage() {
                 muted
                 loop
                 playsInline
-            
                 style={{
                   width: "100%",
                   height: "100%",
@@ -745,9 +676,8 @@ export default function BMSPage() {
           </div>
           <div
             style={{
-              // width: "50%",
               objectFit: "cover",
-              // backgroundColor: "#FEF9F6",
+
               display: "flex",
               alignItems: "start",
               justifyContent: "center",
@@ -756,11 +686,6 @@ export default function BMSPage() {
               fontFamily: "Lucida Sans, sans-serif",
             }}
           >
-            {/* <img
-              src={s10}
-              alt="BMS Case Study - Section 10"
-              style={{ width: "100%", objectFit: "cover" }}
-            /> */}
             <div>
               <h2
                 style={{
@@ -806,9 +731,8 @@ export default function BMSPage() {
         >
           <div
             style={{
-              // width: "50%",
               objectFit: "cover",
-              // backgroundColor: "#FEF9F6",
+
               display: "flex",
               alignItems: "start",
               justifyContent: "center",
@@ -865,7 +789,7 @@ export default function BMSPage() {
             <div
               style={{
                 height: "clamp(480px,65vh, 900px)",
-                // width: "100%",
+
                 objectFit: "fill",
                 backgroundColor: "#ECE9E4",
                 borderRadius: 30,
@@ -883,7 +807,6 @@ export default function BMSPage() {
                 muted
                 loop
                 playsInline
-               
                 style={{
                   width: "100%",
                   height: "100%",
@@ -895,109 +818,20 @@ export default function BMSPage() {
         </div>
         {/* section 12 */}
 
-        {/* <div
-          style={{
-            // display: "flex",
-            position: "relative",
-            backgroundColor: "#E6CE6C",
-            // height: 80,
-            marginTop: 180,
-          }}
-        >
-          <div
+        <div style={{ width: "100%", marginTop: 200 }}>
+          <video
+            src={bmsYellow}
+            autoPlay
+            muted
+            loop
+            playsInline
             style={{
               width: "100%",
+              height: "100%",
               objectFit: "cover",
-              backgroundColor: "#E6CE6C",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-              justifyContent: "flex-start",
+              display: "block",
             }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "flex-start",
-                padding: "40px 20px 0",
-                width: "100%",
-                textAlign: "center",
-                fontFamily: "Lucida Sans, sans-serif",
-              }}
-            >
-              <h2
-                style={{
-                  margin: 0,
-                  fontSize: 27,
-                  fontWeight: 600,
-                  fontFamily: "Montserrat, sans-serif",
-                }}
-              >
-                BMS Products & Features Section
-              </h2>
-              <p
-                style={{
-                  margin: "16px 0 0",
-                  fontSize: 17,
-                  fontWeight: 600,
-                  maxWidth: 580,
-                  paddingBottom: 40,
-                  color: "#2d2d2dd1",
-                }}
-              >
-                All tools, features and product dtails are presented in a single
-                view, amking it easier, more convincing and reliable for user to
-                access all information at once
-              </p>
-            </div>
-
-            <div style={{ width: "100%", margin: "10px auto 0" }}>
-              <div
-                style={{
-                  // height: 1130,
-                  marginBottom: 100,
-                  borderRadius: 0,
-                  overflow: "hidden",
-                  transform: "scaleY(1)",
-                  marginTop: 20,
-                }}
-              >
-                <video
-                  src={bmsYellow}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "fill",
-                    display: "block",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        </div> */}
-
-        <div style={{width:"100%",marginTop:200}}>
-          <video
-                  src={bmsYellow}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-              
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                  }}
-                />
+          />
         </div>
 
         {/* section 13 */}
@@ -1058,10 +892,9 @@ export default function BMSPage() {
 
         <div
           style={{
-            // display: "flex",
             position: "relative",
             backgroundColor: "#F17568",
-            padding:"40px 0",
+            padding: "40px 0",
             marginTop: 180,
           }}
         >
@@ -1076,34 +909,6 @@ export default function BMSPage() {
               justifyContent: "flex-start",
             }}
           >
-            {/* <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "flex-start",
-                padding: "40px 20px 0",
-                width: "100%",
-                textAlign: "center",
-              }}
-            >
-              <h2 style={{ margin: 0, fontSize: 20, fontWeight: 600 }}>
-                BMS Products & Features Section
-              </h2>
-              <p
-                style={{
-                  margin: "16px 0 0",
-                  fontSize: 17,
-                  fontWeight: 600,
-                  maxWidth: 580,
-                  paddingBottom: 40,
-                  color: "#2d2d2db6",
-                }}
-              >
-              All tools, features and product dtails are presented in a single view, amking it easier, more convincing and reliable for user to access all information at once
-              </p>
-            </div> */}
-
             <div
               style={{
                 width: "100%",
@@ -1120,8 +925,7 @@ export default function BMSPage() {
                   backgroundColor: "#f176681f",
                   transform: "scale(1)",
                   width: "90%",
-                  marginBottom:"40px"
-                  
+                  marginBottom: "40px",
                 }}
               >
                 <video
@@ -1130,11 +934,10 @@ export default function BMSPage() {
                   muted
                   loop
                   playsInline
-                 
                   style={{
                     width: "100%",
                     height: "100%",
-                    transform:"scaleX(1)",
+                    transform: "scaleX(1)",
                     objectFit: "cover",
                     display: "block",
                     borderRadius: 8,
@@ -1145,7 +948,6 @@ export default function BMSPage() {
           </div>
         </div>
         {/* section 15 */}
-        {/* <SectionImage src={s15} alt="BMS Case Study - Section 15" /> */}
 
         <div style={{ position: "relative" }}>
           <div>
@@ -1158,8 +960,7 @@ export default function BMSPage() {
                 marginBottom: 0,
                 borderBottomLeftRadius: 48,
                 borderBottomRightRadius: 48,
-                // overflow: "hidden",
-                // subtle shadow to lift it above the footer
+
                 boxShadow: "0 24px 40px rgba(0,0,0,0.08)",
               }}
             >
@@ -1179,7 +980,6 @@ export default function BMSPage() {
             height: 1000,
           }}
         >
-          {/* <SectionImage src={s13} alt="Footer" /> */}
           <FooterSection
             useBgImage={true}
             onBackToTop={goTop}

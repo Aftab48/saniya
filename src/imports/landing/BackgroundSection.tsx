@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // @ts-ignore
-// import imgBackground from "figma:asset/59441181721f9ec0057cf0ca5351b45db44c073a.png";
+
 import imgBazarghorr from "@/assets/work/bazarghorr1.png";
 import imgBuildMyStore from "@/assets/work/bms1.png";
 import imgMentorMe from "@/assets/work/mentorme1.png";
-import newBackground from "@/assets/landing-work/blue-bg.png"
+import newBackground from "@/assets/landing-work/blue-bg.png";
 // import journey from "@/assets/landing-work/journey.png"
 
 type BackgroundSectionProps = {
@@ -19,20 +19,34 @@ type ProjectData = {
 };
 
 const PROJECTS: ProjectData[] = [
-  { image: imgBazarghorr, alt: "Bazarghorr — Hyperlocal Grocery App", link: "/bazarghorr" },
-   { image: imgMentorMe, alt: "MentorMe — Purpose-Led Brand Identity", link: "/mentorme" },
-{ image: imgBuildMyStore, alt: "BuildMyStore — All-in-One Ecommerce Platform", link: "/bms" }
- 
-    
+  {
+    image: imgBazarghorr,
+    alt: "Bazarghorr — Hyperlocal Grocery App",
+    link: "/bazarghorr",
+  },
+  {
+    image: imgMentorMe,
+    alt: "MentorMe — Purpose-Led Brand Identity",
+    link: "/mentorme",
+  },
+  {
+    image: imgBuildMyStore,
+    alt: "BuildMyStore — All-in-One Ecommerce Platform",
+    link: "/bms",
+  },
 ];
 
-
- function SectionImage({ src, alt }: { src: string; alt: string }) {
+function SectionImage({ src, alt }: { src: string; alt: string }) {
   return (
     <img
       src={src}
       alt={alt}
-      style={{ width: "100%", display: "block", overflow: "visible",zIndex:100 }}
+      style={{
+        width: "100%",
+        display: "block",
+        overflow: "visible",
+        zIndex: 100,
+      }}
       loading="lazy"
     />
   );
@@ -51,14 +65,6 @@ function WorkCard({ project }: { project: ProjectData }) {
         textDecoration: "none",
         transition: "transform 0.3s ease, box-shadow 0.3s ease",
       }}
-      // onMouseEnter={(e) => {
-      //   e.currentTarget.style.transform = "scale(1.06)";
-      //   e.currentTarget.style.boxShadow = "0 12px 40px rgba(0,0,0,0.25)";
-      // }}
-      // onMouseLeave={(e) => {
-      //   e.currentTarget.style.transform = "scale(1)";
-      //   e.currentTarget.style.boxShadow = "none";
-      // }}
     >
       <img
         src={project.image}
@@ -73,20 +79,29 @@ function WorkCard({ project }: { project: ProjectData }) {
   );
 }
 
-export default function BackgroundSection({ containerRef }: BackgroundSectionProps) {
+export default function BackgroundSection({
+  containerRef,
+}: BackgroundSectionProps) {
   return (
-    <div ref={containerRef} className="relative w-full shrink-0" style={{ minHeight: 3500,top:160,zIndex:105}}>
+    <div
+      ref={containerRef}
+      className="relative w-full shrink-0"
+      style={{ minHeight: 3500, top: 160, zIndex: 105 }}
+    >
       {/* Full-width background image */}
       <div
         className="absolute left-1/2 top-0 h-full"
         style={{ width: "133.33vw", transform: "translateX(-50%)" }}
       >
-        <div className="pointer-events-none absolute inset-0 overflow-hidden" >
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <img
             alt=""
             className="absolute left-0 top-0 h-full w-full max-w-none object-cover"
             src={newBackground}
-            style={{ borderBottomLeftRadius: "48px", borderBottomRightRadius: "48px" }}
+            style={{
+              borderBottomLeftRadius: "48px",
+              borderBottomRightRadius: "48px",
+            }}
           />
         </div>
       </div>
@@ -121,9 +136,7 @@ export default function BackgroundSection({ containerRef }: BackgroundSectionPro
         {PROJECTS.map((project) => (
           <WorkCard key={project.link} project={project} />
         ))}
-        
       </div>
-      {/* <SectionImage src={journey} alt="My journey so far" /> */}
     </div>
   );
 }
