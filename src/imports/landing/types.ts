@@ -3,4 +3,5 @@ export type LandingNavigationHandlers = {
   onWorkClick: () => void;
   onAboutClick: () => void;
   onContactClick: () => void;
+  onResumeClick?: () => void;
 };

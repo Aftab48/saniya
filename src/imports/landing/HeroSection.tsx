@@ -5,9 +5,10 @@ import imgContactMe1 from "figma:asset/1077e5ec0d9d3a9da413e90dbe1960e8121cb40b.
 import imgLocationPng1 from "figma:asset/33c5347c8865ddee8a9ed022a5443794850405f7.png";
 // @ts-ignore
 import imgMeIcon1 from "figma:asset/c86a38aafd6e5f2f41dab258742a41c31f635ea3.png";
+import { Link } from "react-router-dom";
 
 const EXPANDABLE_CARD_BASE_CLASS =
-  "h-[140px] shrink-0 rounded-[48px] border border-solid border-[#2d6dc3] bg-[rgba(226,226,226,0.2)] transition-all duration-500 ease-in-out";
+  "h-[140px] shrink-0 rounded-[48px] border border-solid border-[#2d6dc3] bg-[rgba(226,226,226,0.2)] transition-all duration-500 ease-in-out ";
 
 type ExpandableCardProps = {
   isActive: boolean;
@@ -23,12 +24,24 @@ type HeroSectionProps = {
 
 function HeroHeading() {
   return (
-    <div className="-translate-x-1/2 -translate-y-1/2 absolute contents left-1/2 top-[calc(50%-357.5px)] not-italic">
-      <div className="absolute left-[calc(50%-832px)] top-[calc(50%-312px)] font-['Clash_Display:Bold',sans-serif] text-[164.816px] leading-[1.03] tracking-[9.889px] text-[#101010]">
-        <p className="mb-0">DIGITAL PRODUCT</p>
-        <p>DESIGNER</p>
+    <div className="-translate-x-1/2 -translate-y-1/2 absolute contents left-1/2 top-[calc(50%-367.5px)] not-italic">
+      <div
+        className="absolute left-[calc(50%-832px)] top-[calc(50%-312px)] whitespace-nowrap font-['Clash_Display:Bold',sans-serif]  leading-[1.03] tracking-[9.889px] text-[#101010] text-[100.816px]"
+        style={{
+          fontFamily: "ClashDisplay, sans-serif",
+          fontWeight: 600,
+          fontSize: 160.6,
+        }}
+      >
+        <p className="" style={{ wordSpacing: 16 }}>
+          DIGITAL PRODUCT
+        </p>
+        <p style={{ wordSpacing: 24, marginRight: 5 }}>DESIGNER</p>
       </div>
-      <p className="absolute left-[calc(50%-832px)] top-[calc(50%-343px)] ml-5 font-['Martel:ExtraBold',sans-serif] text-[16px] leading-[normal] tracking-[0.48px] text-[#2d6dc3]">
+      <p
+        className="absolute left-[calc(50%-832px)] top-[calc(50%-343px)] ml-5  text-[16px] leading-[normal] tracking-[0.48px] text-[#2d6dc3] text-[16px]"
+        style={{ fontWeight: 800, fontFamily: "Martel, serif" }}
+      >
         <span className="block px-4">
           USERINTERFACE | USEREXPERIENCE | VISUAL IDENTITY
         </span>
@@ -40,27 +53,36 @@ function HeroHeading() {
 function ProfileCard({ isActive, onHover }: ExpandableCardProps) {
   return (
     <div
-      className={`${EXPANDABLE_CARD_BASE_CLASS} relative mr-5 overflow-hidden`}
+      className={`${EXPANDABLE_CARD_BASE_CLASS} relative mr-5 overflow-visible `}
       style={{ width: isActive ? 450 : 170 }}
       onMouseEnter={onHover}
     >
-      <div className="relative flex h-full items-center justify-center">
+      <div className="relative flex h-full items-center justify-center pl-0">
         <div
           className={`relative z-10 flex shrink-0 items-center justify-center transition-all duration-500 ${
-            isActive ? "h-[135px] w-[135px]" : "h-[100px] w-[100px]"
+            isActive ? "h-[180px] w-[170px]" : "h-[110px] w-[100px]"
           }`}
-          style={{ transform: isActive ? "translateX(-110px)" : "translateX(0)" }}
+          style={{
+            transform: isActive
+              ? "translateX(-170px) translateY(-10px)"
+              : "translateX(0)",
+          }}
           data-name="me icon"
         >
           <img
             alt="Saniya profile"
-            className="h-full w-full rounded-full object-cover"
+            className="h-full w-full rounded-full object-cover overflow"
             src={imgMeIcon1}
           />
         </div>
         <p
-          className="absolute left-[170px] whitespace-nowrap font-['Martel:ExtraBold',sans-serif] text-[24px] not-italic leading-[normal] text-[#2d6dc3] transition-opacity duration-300"
-          style={{ opacity: isActive ? 1 : 0 }}
+          className="absolute left-[170px] whitespace-nowrap  text-[24px] not-italic leading-[normal] text-[#2d6dc3] transition-opacity duration-100"
+          style={{
+            opacity: isActive ? 1 : 0,
+            fontFamily: "Martel, serif",
+            fontWeight: 800,
+            marginLeft: -18,
+          }}
         >
           HELLO! I&apos;M SANIYA
         </p>
@@ -73,19 +95,29 @@ function LocationCard({ isActive, onHover }: ExpandableCardProps) {
   return (
     <div
       className={EXPANDABLE_CARD_BASE_CLASS}
-      style={{ width: isActive ? 450 : 170 }}
+      style={{ width: isActive ? 450 : 170, overflow: "hidden" }}
       onMouseEnter={onHover}
     >
-      <div className="relative flex h-full items-center gap-5 pl-[10px] pr-[10px]">
+      <div className="relative flex h-full items-center gap-5 ">
         <div
           className="relative flex h-[170px] w-[170px] shrink-0 items-center justify-center"
           data-name="location png"
         >
-          <img alt="" className="h-full w-full object-cover" src={imgLocationPng1} />
+          <img
+            alt=""
+            className="h-full w-full object-cover"
+            src={imgLocationPng1}
+            style={{ transform: "scale(1.1" }}
+          />
         </div>
         <p
-          className="whitespace-nowrap font-['Martel:ExtraBold',sans-serif] text-[24px] not-italic leading-[normal] text-[#2d6dc3] transition-opacity duration-300"
-          style={{ opacity: isActive ? 1 : 0 }}
+          className="whitespace-nowrap text-[24px] not-italic leading-[normal] text-[#2d6dc3] transition-opacity duration-300"
+          style={{
+            opacity: isActive ? 1 : 0,
+            fontFamily: "Martel, serif",
+            fontWeight: 800,
+            marginLeft: -25,
+          }}
         >
           Ahmedabad | Pune
         </p>
@@ -95,22 +127,54 @@ function LocationCard({ isActive, onHover }: ExpandableCardProps) {
 }
 
 function ContactCard({ isActive, onHover }: ExpandableCardProps) {
+  const goContact = () => {
+    const el = document.getElementById("contact");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.location.hash = "#contact";
+    }
+  };
   return (
     <div
       className={EXPANDABLE_CARD_BASE_CLASS}
-      style={{ width: isActive ? 490 : 170 }}
+      style={{
+        width: isActive ? 465 : 170,
+        backgroundColor: isActive ? "#2d6dc3" : "transparent",
+        color: isActive ? "#fff" : "#2d6dc3",
+        overflow: "hidden",
+      }}
       onMouseEnter={onHover}
     >
-      <div className="relative flex h-full items-center gap-5 pl-[27px] pr-[35px]">
+      <div
+        className="relative flex h-full items-center gap-5 pl-[10px] cursor-pointer"
+        // style={{pointerEvents:""}}
+        role="button"
+        tabIndex={0}
+        onClick={goContact}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") goContact();
+        }}
+      >
         <div
           className="relative flex h-[135px] w-[135px] shrink-0 items-center justify-center"
           data-name="contact me"
         >
-          <img alt="" className="h-full w-full object-contain" src={imgContactMe1} />
+          <img
+            alt=""
+            className="h-full w-full object-contain"
+            src={imgContactMe1}
+            style={{ transform: "scale(1.2)" }}
+          />
         </div>
         <p
-          className="whitespace-nowrap font-['Martel:ExtraBold',sans-serif] text-[24px] not-italic leading-[normal] text-[#2d6dc3] transition-opacity duration-300"
-          style={{ opacity: isActive ? 1 : 0 }}
+          className="whitespace-nowrap  text-[24px] not-italic leading-[normal] transition-opacity duration-300"
+          style={{
+            opacity: isActive ? 1 : 0,
+            fontFamily: "Martel, serif",
+            fontWeight: 800,
+            marginLeft: 22,
+          }}
         >
           Let&apos;s Talk Design
         </p>
@@ -127,12 +191,19 @@ function IntroCards() {
 
   return (
     <div
-      className="absolute left-[937px] top-[200px] flex gap-[7px]"
+      className="absolute  flex gap-[7px] p-30"
+      style={{ top: 210, left: 885, transform: "scale(0.85)" }}
       data-name="Component 1"
       onMouseLeave={activateProfile}
     >
-      <ProfileCard isActive={activeCard === "profile"} onHover={activateProfile} />
-      <LocationCard isActive={activeCard === "location"} onHover={activateLocation} />
+      <ProfileCard
+        isActive={activeCard === "profile"}
+        onHover={activateProfile}
+      />
+      <LocationCard
+        isActive={activeCard === "location"}
+        onHover={activateLocation}
+      />
       <ContactCard isActive={activeCard === "phone"} onHover={activatePhone} />
     </div>
   );
@@ -143,25 +214,24 @@ export default function HeroSection({
   containerRef,
 }: HeroSectionProps) {
   const clampedCoverProgress = Math.min(1, Math.max(0, coverProgress));
-  const contentScale = 1 - clampedCoverProgress * 0.16;
   const contentOpacity = 1 - clampedCoverProgress * 0.35;
   const contentBlur = clampedCoverProgress * 2;
-  const contentLift = clampedCoverProgress * -36;
 
   return (
     <div
       ref={containerRef}
-      className="relative sticky top-[200px] mx-auto h-[780px] w-full shrink-0 overflow-visible"
+      className="relative sticky top-[200px] h-[780px] w-full shrink-0 overflow-visible"
+      style={{ top: 340 }}
     >
       <div
         className="relative h-full w-full"
         style={{
-          transform: `translate3d(0, ${contentLift}px, 0) scale(${contentScale})`,
+          transform: "scale(1)",
           transformOrigin: "50% 35%",
           opacity: contentOpacity,
           filter: `blur(${contentBlur}px)`,
-          willChange: "transform, opacity, filter",
-          transition: "transform 80ms linear, opacity 80ms linear, filter 80ms linear",
+          willChange: "opacity, filter",
+          transition: "opacity 80ms linear, filter 80ms linear",
         }}
       >
         <div className="-translate-x-1/2 absolute left-[calc(50%+8.5px)] top-40 mt-5 h-[686px] w-[1664px]">
@@ -170,11 +240,11 @@ export default function HeroSection({
         </div>
         <div
           className="absolute left-1/2 -translate-x-1/2 w-full max-w-[800px] px-4 text-center font-['Martel:ExtraBold',sans-serif] text-[22px] not-italic leading-[normal] text-[#2d6dc3]"
-          style={{ top: "550px" }}
+          style={{ top: "500px", fontWeight: 800, fontFamily: "Martel, serif" }}
         >
           <p className="mb-0">
-            Designing meaningful experiences where every interaction is crafted with
-            purpose,
+            Designing meaningful experiences where every interaction is crafted
+            with purpose,
           </p>
           <p>From head scratching moments to flows that just make sense.</p>
         </div>

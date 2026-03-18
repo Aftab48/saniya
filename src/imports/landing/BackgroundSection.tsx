@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // @ts-ignore
-import imgBackground from "figma:asset/59441181721f9ec0057cf0ca5351b45db44c073a.png";
-import imgBazarghorr from "@/assets/work/bazarghorr.png";
-import imgBuildMyStore from "@/assets/work/buildmystore.png";
-import imgMentorMe from "@/assets/work/mentorme.png";
+
+import imgBazarghorr from "@/assets/work/bazarghorr1.png";
+import imgBuildMyStore from "@/assets/work/bms1.png";
+import imgMentorMe from "@/assets/work/mentorme1.png";
+import newBackground from "@/assets/landing-work/blue-bg.png";
+// import journey from "@/assets/landing-work/journey.png"
 
 type BackgroundSectionProps = {
   containerRef?: React.RefObject<HTMLDivElement | null>;
@@ -17,10 +19,38 @@ type ProjectData = {
 };
 
 const PROJECTS: ProjectData[] = [
-  { image: imgBazarghorr, alt: "Bazarghorr — Hyperlocal Grocery App", link: "/bazarghorr" },
-  { image: imgBuildMyStore, alt: "BuildMyStore — All-in-One Ecommerce Platform", link: "/bms" },
-  { image: imgMentorMe, alt: "MentorMe — Purpose-Led Brand Identity", link: "/mentorme" },
+  {
+    image: imgBazarghorr,
+    alt: "Bazarghorr — Hyperlocal Grocery App",
+    link: "/bazarghorr",
+  },
+  {
+    image: imgMentorMe,
+    alt: "MentorMe — Purpose-Led Brand Identity",
+    link: "/mentorme",
+  },
+  {
+    image: imgBuildMyStore,
+    alt: "BuildMyStore — All-in-One Ecommerce Platform",
+    link: "/bms",
+  },
 ];
+
+function SectionImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      style={{
+        width: "100%",
+        display: "block",
+        overflow: "visible",
+        zIndex: 100,
+      }}
+      loading="lazy"
+    />
+  );
+}
 
 function WorkCard({ project }: { project: ProjectData }) {
   return (
@@ -28,20 +58,12 @@ function WorkCard({ project }: { project: ProjectData }) {
       to={project.link}
       style={{
         display: "block",
-        width: 1100,
+        width: 1450,
         borderRadius: 24,
         overflow: "hidden",
         cursor: "pointer",
         textDecoration: "none",
         transition: "transform 0.3s ease, box-shadow 0.3s ease",
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.transform = "scale(1.02)";
-        e.currentTarget.style.boxShadow = "0 12px 40px rgba(0,0,0,0.25)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.transform = "scale(1)";
-        e.currentTarget.style.boxShadow = "none";
       }}
     >
       <img
@@ -57,9 +79,15 @@ function WorkCard({ project }: { project: ProjectData }) {
   );
 }
 
-export default function BackgroundSection({ containerRef }: BackgroundSectionProps) {
+export default function BackgroundSection({
+  containerRef,
+}: BackgroundSectionProps) {
   return (
-    <div ref={containerRef} className="relative w-full shrink-0" style={{ minHeight: 2500 }}>
+    <div
+      ref={containerRef}
+      className="relative w-full shrink-0"
+      style={{ minHeight: 3500, top: 160, zIndex: 105 }}
+    >
       {/* Full-width background image */}
       <div
         className="absolute left-1/2 top-0 h-full"
@@ -69,7 +97,11 @@ export default function BackgroundSection({ containerRef }: BackgroundSectionPro
           <img
             alt=""
             className="absolute left-0 top-0 h-full w-full max-w-none object-cover"
-            src={imgBackground}
+            src={newBackground}
+            style={{
+              borderBottomLeftRadius: "48px",
+              borderBottomRightRadius: "48px",
+            }}
           />
         </div>
       </div>
@@ -84,14 +116,15 @@ export default function BackgroundSection({ containerRef }: BackgroundSectionPro
           alignItems: "center",
           paddingTop: 80,
           paddingBottom: 100,
-          gap: 48,
+          gap: 108,
         }}
       >
         <h2
           style={{
-            fontFamily: "'Clash Display:Bold', sans-serif",
+            fontFamily: "ClashDisplay, sans-serif",
             fontSize: 64,
-            color: "#101010",
+            fontWeight: 800,
+            color: "#ffffff",
             letterSpacing: 4,
             textAlign: "center",
             marginBottom: 16,
