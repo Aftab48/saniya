@@ -21,34 +21,92 @@ function MobileCanvas() {
     resumeDownloadLink.click();
     resumeDownloadLink.remove();
   }, []);
+  const safeTop = "calc(env(safe-area-inset-top, 0px) + clamp(14px, 4vw, 24px))";
+  const sidePadding = "clamp(14px, 4vw, 28px)";
+  const contentTop = "calc(env(safe-area-inset-top, 0px) + clamp(72px, 17vw, 116px))";
 
   return (
-    <div className="min-h-[100dvh] w-screen overflow-hidden bg-[#f3f1ec]">
-      <div
-        className="relative mx-auto min-h-[100dvh] w-full px-[clamp(14px,4.2vw,28px)]"
+    <div
+      style={{
+        minHeight: "100dvh",
+        width: "100%",
+        backgroundColor: "#f3f1ec",
+        overflow: "hidden",
+        position: "relative",
+      }}
+    >
+      <button
+        type="button"
+        onClick={downloadResume}
         style={{
-          paddingTop: "calc(env(safe-area-inset-top, 0px) + clamp(18px, 4.2vw, 30px))",
-          paddingBottom:
-            "calc(env(safe-area-inset-bottom, 0px) + clamp(18px, 4.2vw, 30px))",
+          position: "absolute",
+          top: safeTop,
+          right: sidePadding,
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "6px",
+          whiteSpace: "nowrap",
+          fontFamily: "ClashDisplay, sans-serif",
+          fontSize: "clamp(16px, 4vw, 22px)",
+          fontWeight: 600,
+          color: "#2d6dc3",
+          lineHeight: 1,
+          padding: 0,
+          border: "none",
+          background: "transparent",
+          cursor: "pointer",
+          zIndex: 2,
         }}
       >
-        <button
-          type="button"
-          onClick={downloadResume}
-          className="absolute right-[clamp(14px,4.2vw,28px)] top-[calc(env(safe-area-inset-top,0px)+clamp(18px,4.2vw,30px))] inline-flex items-center gap-1 text-[clamp(15px,3.9vw,22px)] font-semibold leading-none text-[#2d6dc3] transition-opacity hover:opacity-70"
-        >
-          Resume
-          <Download size={16} strokeWidth={2.2} />
-        </button>
+        <span>Resume</span>
+        <Download size={16} strokeWidth={2.2} />
+      </button>
 
-        <div className="relative mt-[clamp(68px,16vw,112px)] h-[clamp(360px,62vh,540px)] w-full">
+      <div
+        style={{
+          minHeight: "100dvh",
+          paddingTop: contentTop,
+          paddingLeft: sidePadding,
+          paddingRight: sidePadding,
+          paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 20px)",
+          boxSizing: "border-box",
+        }}
+      >
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "560px",
+            margin: "0 auto",
+            display: "flex",
+            alignItems: "flex-start",
+            gap: "clamp(8px, 2.8vw, 18px)",
+          }}
+        >
           <img
             src={mobileCanvas}
             alt="Saniya painting on a canvas"
-            className="h-full w-[clamp(228px,62vw,360px)] object-contain object-left-top"
+            style={{
+              width: "clamp(160px, 56vw, 330px)",
+              height: "auto",
+              objectFit: "contain",
+              flexShrink: 0,
+            }}
           />
 
-          <p className="absolute right-[clamp(0px,2vw,20px)] top-[clamp(36px,9vw,62px)] w-[clamp(150px,43vw,260px)] text-left font-['ClashDisplay',sans-serif] text-[clamp(15px,4.7vw,28px)] font-semibold leading-[1.12] text-[#141414]">
+          <p
+            style={{
+              margin: 0,
+              marginTop: "clamp(26px, 8vw, 58px)",
+              flex: 1,
+              minWidth: 0,
+              maxWidth: "clamp(110px, 38vw, 250px)",
+              fontFamily: "ClashDisplay, sans-serif",
+              fontSize: "clamp(14px, 4vw, 28px)",
+              lineHeight: 1.12,
+              fontWeight: 600,
+              color: "#141414",
+            }}
+          >
             Built for a bigger canvas, best viewed on desktop.
           </p>
         </div>
