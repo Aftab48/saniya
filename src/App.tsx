@@ -1,12 +1,26 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import LandingFinal from "./imports/LandingFinal";
 import BazarghorrPage from "./pages/BazarghorrPage";
 import BMSPage from "./pages/BMSPage";
 import MentorMePage from "./pages/MentorMePage";
+import mobileCanvas from "./assets/mobile-canvas.png";
 
 const WORK_SECTION_TOP = 700;
 const ABOUT_SECTION_TOP = 3300;
+const MOBILE_BREAKPOINT = 728;
+
+function MobileCanvas() {
+  return (
+    <div className="flex min-h-screen w-screen items-center justify-center overflow-hidden bg-[#fefcf4]">
+      <img
+        src={mobileCanvas}
+        alt="Mobile canvas"
+        className="h-full w-full object-contain"
+      />
+    </div>
+  );
+}
 
 function HomePage() {
   const scrollTo = useCallback((top: number) => {
@@ -42,6 +56,26 @@ function HomePage() {
 }
 
 export default function App() {
+  const [isMobileViewport, setIsMobileViewport] = useState<boolean>(
+    () => window.innerWidth < MOBILE_BREAKPOINT
+  );
+
+  useEffect(() => {
+    const updateViewport = () => {
+      setIsMobileViewport(window.innerWidth < MOBILE_BREAKPOINT);
+    };
+
+    window.addEventListener("resize", updateViewport);
+
+    return () => {
+      window.removeEventListener("resize", updateViewport);
+    };
+  }, []);
+
+  if (isMobileViewport) {
+    return <MobileCanvas />;
+  }
+
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
