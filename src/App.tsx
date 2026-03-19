@@ -23,7 +23,6 @@ function MobileCanvas() {
   }, []);
   const safeTop = "calc(env(safe-area-inset-top, 0px) + clamp(14px, 4vw, 24px))";
   const sidePadding = "clamp(14px, 4vw, 28px)";
-  const contentTop = "calc(env(safe-area-inset-top, 0px) + clamp(72px, 17vw, 116px))";
 
   return (
     <div
@@ -41,7 +40,7 @@ function MobileCanvas() {
         style={{
           position: "absolute",
           top: safeTop,
-          right: sidePadding,
+          left: sidePadding,
           display: "inline-flex",
           alignItems: "center",
           gap: "6px",
@@ -65,49 +64,53 @@ function MobileCanvas() {
       <div
         style={{
           minHeight: "100dvh",
-          paddingTop: contentTop,
           paddingLeft: sidePadding,
           paddingRight: sidePadding,
-          paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 20px)",
           boxSizing: "border-box",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
         <div
           style={{
             width: "100%",
-            maxWidth: "560px",
+            maxWidth: "600px",
             margin: "0 auto",
+            position: "relative",
             display: "flex",
-            alignItems: "flex-start",
-            gap: "clamp(8px, 2.8vw, 18px)",
+            justifyContent: "center",
           }}
         >
           <img
             src={mobileCanvas}
             alt="Saniya painting on a canvas"
             style={{
-              width: "clamp(160px, 56vw, 330px)",
+              width: "100%",
               height: "auto",
               objectFit: "contain",
-              flexShrink: 0,
+              transform: "scale(1.1)",
             }}
           />
 
           <p
             style={{
+              position: "absolute",
+              top: "5%",
+              right: "2%",
               margin: 0,
-              marginTop: "clamp(26px, 8vw, 58px)",
-              flex: 1,
-              minWidth: 0,
-              maxWidth: "clamp(110px, 38vw, 250px)",
+              maxWidth: "clamp(120px, 45vw, 240px)",
               fontFamily: "ClashDisplay, sans-serif",
-              fontSize: "clamp(14px, 4vw, 28px)",
-              lineHeight: 1.12,
+              fontSize: "clamp(15px, 4.5vw, 26px)",
+              lineHeight: 1.15,
               fontWeight: 600,
               color: "#141414",
+              zIndex: 10,
+              textAlign: "right",
+              textShadow: "0px 0px 10px rgba(243, 241, 236, 0.8)",
             }}
           >
-            Built for a bigger canvas, best viewed on desktop.
+            Built for a bigger canvas,<br />best viewed on desktop.
           </p>
         </div>
       </div>
