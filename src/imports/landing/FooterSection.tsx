@@ -1,8 +1,8 @@
 import React, { use, useState, type ReactNode } from "react";
 import svgPaths from "../svg-ghixc67pzt";
-import footerImage from "figma:asset/thumbs-up-final.png";
-import bgImage from "@/assets/landing-work/blue-bg.png";
-import footerBg from "@/assets/landing-work/footer bg.png";
+import footerImage from "@/assets/thumbs-up-final.webp";
+import bgImage from "@/assets/landing-work/blue-bg.webp";
+import footerBg from "@/assets/landing-work/footer bg.webp";
 import { Link } from "react-router-dom";
 type FooterSectionProps = {
   onBackToTop: () => void;

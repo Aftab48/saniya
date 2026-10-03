@@ -5,15 +5,15 @@ import { CaseStudyContainer } from "@/components/ui/CaseStudyContainer";
 import FooterSection from "@/imports/landing/FooterSection";
 
 // Screen Images for Customer Page
-import dashboardPage from "@/assets/bazarghorr/screens/dashboard.png";
+import dashboardPage from "@/assets/bazarghorr/screens/dashboard.webp";
 import searchPage from "@/assets/bazarghorr/screens/search-page.png";
 import productPage from "@/assets/bazarghorr/screens/product-page.png";
 
-import vendorGroup from "@/assets/bazarghorr/illustrations/vendorGroup.png";
+import vendorGroup from "@/assets/bazarghorr/illustrations/vendorGroup.webp";
 
 import arrow from "@/assets/bazarghorr/arrow.png";
 // Section images
-import s1a from "@/assets/bazarghorr/sections/s1b.png";
+import s1a from "@/assets/bazarghorr/sections/s1b.webp";
 
 import {
   DesignProcessSection,
@@ -23,9 +23,9 @@ import {
   SwotSection,
 } from "./BazarghorrSections";
 import s7 from "@/assets/bazarghorr/sections/s7.png";
-import s8 from "@/assets/bazarghorr/sections/s8.png";
-import s10 from "@/assets/bazarghorr/sections/s10.png";
-import s10a from "@/assets/bazarghorr/sections/s10a.png";
+import s8 from "@/assets/bazarghorr/sections/s8.webp";
+import s10 from "@/assets/bazarghorr/sections/s10.webp";
+import s10a from "@/assets/bazarghorr/sections/s10a.webp";
 
 
 // Videos
@@ -38,9 +38,9 @@ import categoriesNavigation from "@/assets/bazarghorr/flows/categories-navigatio
 
 // Illustrations
 import maleVendorThinking from "@/assets/bazarghorr/illustrations/vendorThinking.png";
-import screenIllustration from "@/assets/bazarghorr/illustrations/screen-illustrations.png";
+import screenIllustration from "@/assets/bazarghorr/illustrations/screen-illustrations.webp";
 import thinkingWoman from "@/assets/bazarghorr/illustrations/AuntyThinking.png";
-import customerOrder from "@/assets/bazarghorr/illustrations/phone-long.png";
+import customerOrder from "@/assets/bazarghorr/illustrations/phone-long.webp";
 import sparkle from "@/assets/bazarghorr/illustrations/sparkle.png";
 
 // Screens for s11
@@ -49,7 +49,7 @@ import analytics2 from "@/assets/bazarghorr/screens/analytics-2.png";
 import analytics3 from "@/assets/bazarghorr/screens/analytics-3.png";
 import orderHistory from "@/assets/bazarghorr/screens/order-history.png";
 import orderHistoryDetails from "@/assets/bazarghorr/screens/order-history-details-page.png";
-import auntyGroup from "@/assets/bazarghorr/illustrations/auntyGroup.png";
+import auntyGroup from "@/assets/bazarghorr/illustrations/auntyGroup.webp";
 
 // ─── Shared constants ────────────────────────────────────────────────
 

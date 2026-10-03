@@ -8,12 +8,12 @@ import { BreakdownSection, EndGoalsSection, ThankYouStrip } from "./BMSSections"
 import bmsLogo from "@/assets/bms/logo.png";
 
 //thumbnail
-import bmsThumbnail from "@/assets/bms/bmsthumbnail.png";
+import bmsThumbnail from "@/assets/bms/bmsthumbnail.webp";
 
 //macbook mockups
 
-import mac1 from "@/assets/bms/mac1.png";
-import mac2 from "@/assets/bms/mac2.png";
+import mac1 from "@/assets/bms/mac1.webp";
+import mac2 from "@/assets/bms/mac2.webp";
 
 //end goals
 
@@ -22,7 +22,7 @@ import mac2 from "@/assets/bms/mac2.png";
 
 //trust eliments
 
-import trustEliments from "@/assets/bms/trust elements.png";
+import trustEliments from "@/assets/bms/trust elements.webp";
 
 //sections
 import s1 from "@/assets/bms/s1a1.png";
