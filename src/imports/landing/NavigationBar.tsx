@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import NavItem from "./NavItem";
 import type { LandingNavigationHandlers } from "./types";
-import sanaiPdf from '../../assets/saniya.pdf';
+import saniyaPdf from "../../assets/saniya-resume.pdf";
 import React from "react";
 
 type NavigationBarProps = LandingNavigationHandlers & {
@@ -53,10 +53,10 @@ export default function NavigationBar({
     }
   };
 
-    const onResumeClick = () => {
-    const url = sanaiPdf // adjust path to your file
-    const fileName = 'saniya-resume.pdf';
-    const a = document.createElement('a');
+  const onResumeClick = () => {
+    const url = saniyaPdf;
+    const fileName = "saniya-resume.pdf";
+    const a = document.createElement("a");
     a.href = url;
     a.download = fileName;
     document.body.appendChild(a);

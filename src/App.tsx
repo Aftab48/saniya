@@ -6,7 +6,7 @@ import BazarghorrPage from "./pages/BazarghorrPage";
 import BMSPage from "./pages/BMSPage";
 import MentorMePage from "./pages/MentorMePage";
 import mobileCanvas from "./assets/mobile-canvas.png";
-import saniyaPdf from "./assets/saniya.pdf";
+import saniyaPdf from "./assets/saniya-resume.pdf";
 
 const WORK_SECTION_TOP = 700;
 const ABOUT_SECTION_TOP = 3300;
