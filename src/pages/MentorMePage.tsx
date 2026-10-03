@@ -5,7 +5,7 @@ import FooterSection from "@/imports/landing/FooterSection";
 import s1 from "@/assets/mentorme/t1.png";
 import t2 from "@/assets/mentorme/t2.png";
 import s3 from "@/assets/mentorme/mm2.png";
-import s2 from "@/assets/mentorme/s2.png";
+import { PotentialBanner } from "./MentorMeSections";
 import mmvideo from "@/assets/mentorme/mentormeVideo.mp4";
 
 function SectionImage({ src, alt }: { src: string; alt: string }) {
@@ -176,7 +176,7 @@ export default function MentorMePage() {
                 boxShadow: "0 24px 40px rgba(0,0,0,0.08)",
               }}
             >
-              <SectionImage src={s2} alt="Potential" />
+              <PotentialBanner />
             </CaseStudyContainer>
           </div>
         </div>

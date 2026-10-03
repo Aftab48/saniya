@@ -15,17 +15,18 @@ import arrow from "@/assets/bazarghorr/arrow.png";
 // Section images
 import s1a from "@/assets/bazarghorr/sections/s1b.png";
 
-import s3 from "@/assets/bazarghorr/sections/s3.png";
-import s4 from "@/assets/bazarghorr/sections/s4.png";
-import s5 from "@/assets/bazarghorr/sections/s5.png";
-import s6 from "@/assets/bazarghorr/sections/s6.png";
+import {
+  DesignProcessSection,
+  NumbersSection,
+  PersonaSection,
+  ResearchSection,
+  SwotSection,
+} from "./BazarghorrSections";
 import s7 from "@/assets/bazarghorr/sections/s7.png";
 import s8 from "@/assets/bazarghorr/sections/s8.png";
 import s10 from "@/assets/bazarghorr/sections/s10.png";
 import s10a from "@/assets/bazarghorr/sections/s10a.png";
-import s10aBg from "@/assets/bazarghorr/sections/s10a-bg.png";
 
-import s14 from "@/assets/bazarghorr/sections/s14.png";
 
 // Videos
 import vendorOnboarding from "@/assets/bazarghorr/flows/vendor-onboarding.mp4";
@@ -1373,9 +1374,7 @@ function CustomerSection() {
           marginTop: SECTION_OVERLAP,
           position: "relative",
           overflow: "visible",
-          backgroundImage: `url(${s10aBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundColor: "#33302f",
           height: containerHeight,
           borderTopRightRadius: 58,
           borderTopLeftRadius: 58,
@@ -1787,7 +1786,7 @@ export default function BazarghorrPage() {
           zIndex={3}
           style={{ marginTop: SECTION_OVERLAP, position: "relative" }}
         >
-          <SectionImage src={s3} alt="Design process" />
+          <DesignProcessSection />
         </CaseStudyContainer>
 
         {/* s4: SWOT Analysis — light, curved top */}
@@ -1805,7 +1804,7 @@ export default function BazarghorrPage() {
             overflow: "visible",
           }}
         >
-          <SectionImage src={s4} alt="SWOT analysis" />
+          <SwotSection />
         </CaseStudyContainer>
 
         {/* s5: User Personas — dark, curved top */}
@@ -1814,7 +1813,7 @@ export default function BazarghorrPage() {
           zIndex={5}
           style={{ marginTop: 0, position: "relative", zIndex: 5 }}
         >
-          <SectionImage src={s5} alt="User personas" />
+          <PersonaSection />
         </CaseStudyContainer>
 
         {/* s6: Quantitative Research — light, curved top */}
@@ -1832,7 +1831,7 @@ export default function BazarghorrPage() {
             overflow: "visible",
           }}
         >
-          <SectionImage src={s6} alt="Quantitative research" />
+          <ResearchSection />
         </CaseStudyContainer>
 
         {/* s7: User Flows — dark, curved top */}
@@ -2021,7 +2020,7 @@ export default function BazarghorrPage() {
                 boxShadow: "0 24px 40px rgba(0,0,0,0.08)",
               }}
             >
-              <SectionImage src={s14} alt="Numbers" />
+              <NumbersSection />
             </CaseStudyContainer>
           </div>
         </div>

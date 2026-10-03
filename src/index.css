@@ -45,6 +45,12 @@ html, body {
   font-style: normal;
 }
 @font-face {
+  font-family: 'Lucida Sans Demibold';
+  src: url('./assets/fonts/LSANSD.TTF') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
   font-family: 'Lucida Sans';
   src: url('./assets/fonts/LSANSB.TTF') format('opentype');
   font-weight: 700;

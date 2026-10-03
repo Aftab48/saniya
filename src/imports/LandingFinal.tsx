@@ -8,24 +8,23 @@ import FooterSection from "./landing/FooterSection";
 import HeroSection from "./landing/HeroSection";
 import NavigationBar from "./landing/NavigationBar";
 import type { LandingNavigationHandlers } from "./landing/types";
-import journey from "@/assets/landing-work/journey.png";
+import JourneySection from "./landing/JourneySection";
 
-function SectionImage({ src, alt }: { src: string; alt: string }) {
+// Keeps the spacing/scale the old journey <img> had.
+function JourneyBlock() {
   return (
-    <img
-      src={src}
-      alt={alt}
+    <div
       style={{
         width: "100%",
-        display: "block",
         overflow: "hidden",
         zIndex: 100,
         marginTop: 220,
         marginBottom: 100,
         transform: "scale(1.2)",
       }}
-      loading="lazy"
-    />
+    >
+      <JourneySection />
+    </div>
   );
 }
 
@@ -101,7 +100,7 @@ function LandingSections({
         id="journey"
         style={{ width: "100%", transform: "scale(1.05)", padding: "60px 0" }}
       >
-        <SectionImage src={journey} alt="My journey so far" />
+        <JourneyBlock />
       </div>
 
       <div
