@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import NavItem from "./NavItem";
 import type { LandingNavigationHandlers } from "./types";
-import saniyaPdf from "../../assets/saniya-resume.pdf";
+import saniyaPdf from "../../assets/Saniya_Inamdar_Resume.pdf";
 import React from "react";
 
 type NavigationBarProps = LandingNavigationHandlers & {
@@ -55,7 +55,7 @@ export default function NavigationBar({
 
   const onResumeClick = () => {
     const url = saniyaPdf;
-    const fileName = "saniya-resume.pdf";
+    const fileName = "Saniya_Inamdar_Resume.pdf";
     const a = document.createElement("a");
     a.href = url;
     a.download = fileName;

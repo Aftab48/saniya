@@ -42,7 +42,7 @@ function Entry({ entry: [title, tagX, date, desc, y, dy], offset = 0 }: { entry:
           (internship)
         </Txt>
       )}
-      <Txt x={1774} y={y - offset + 6} size={25} k={0.025} align="right" style={BLUE}>
+      <Txt x={1774} y={y - offset + 6} size={25} k={0.025} align="right" style={{ ...BLUE, color: "#101010" }}>
         {date}
       </Txt>
       <Txt x={140} y={dy - offset + 1} size={19.9} k={0.025} style={BODY}>

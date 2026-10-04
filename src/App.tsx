@@ -6,7 +6,7 @@ import BazarghorrPage from "./pages/BazarghorrPage";
 import BMSPage from "./pages/BMSPage";
 import MentorMePage from "./pages/MentorMePage";
 import mobileCanvas from "./assets/mobile-canvas.webp";
-import saniyaPdf from "./assets/saniya-resume.pdf";
+import saniyaPdf from "./assets/Saniya_Inamdar_Resume.pdf";
 
 const WORK_SECTION_TOP = 700;
 const ABOUT_SECTION_TOP = 3300;
@@ -16,7 +16,7 @@ function MobileCanvas() {
   const downloadResume = useCallback(() => {
     const resumeDownloadLink = document.createElement("a");
     resumeDownloadLink.href = saniyaPdf;
-    resumeDownloadLink.download = "saniya-resume.pdf";
+    resumeDownloadLink.download = "Saniya_Inamdar_Resume.pdf";
     document.body.appendChild(resumeDownloadLink);
     resumeDownloadLink.click();
     resumeDownloadLink.remove();
