@@ -6,7 +6,6 @@ import imgBazarghorr from "@/assets/work/bazarghorr1.webp";
 import imgBuildMyStore from "@/assets/work/bms1.webp";
 import imgMentorMe from "@/assets/work/mentorme1.webp";
 import newBackground from "@/assets/landing-work/blue-bg.webp";
-// import journey from "@/assets/landing-work/journey.png"
 
 type BackgroundSectionProps = {
   containerRef?: React.RefObject<HTMLDivElement | null>;
