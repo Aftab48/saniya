@@ -5,7 +5,7 @@ import LandingFinal from "./imports/LandingFinal";
 import BazarghorrPage from "./pages/BazarghorrPage";
 import BMSPage from "./pages/BMSPage";
 import MentorMePage from "./pages/MentorMePage";
-import mobileCanvas from "./assets/mobile-canvas.png";
+import mobileCanvas from "./assets/mobile-canvas.webp";
 import saniyaPdf from "./assets/saniya-resume.pdf";
 
 const WORK_SECTION_TOP = 700;

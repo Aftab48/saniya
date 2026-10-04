@@ -2,28 +2,27 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { CaseStudyContainer } from "@/components/ui/CaseStudyContainer";
 import FooterSection from "@/imports/landing/FooterSection";
+import { BreakdownSection, EndGoalsSection, ThankYouStrip } from "./BMSSections";
 
 //logo
 import bmsLogo from "@/assets/bms/logo.png";
 
 //thumbnail
-import bmsThumbnail from "@/assets/bms/bmsthumbnail.png";
+import bmsThumbnail from "@/assets/bms/bmsthumbnail.webp";
 
 //macbook mockups
 
-import mac1 from "@/assets/bms/mac1.png";
-import mac2 from "@/assets/bms/mac2.png";
+import mac1 from "@/assets/bms/mac1.webp";
+import mac2 from "@/assets/bms/mac2.webp";
 
 //end goals
-import endGoals from "@/assets/bms/endgols.png";
 
 //  breakdown
 
-import breakDown from "@/assets/bms/breakdown.png";
 
 //trust eliments
 
-import trustEliments from "@/assets/bms/trust elements.png";
+import trustEliments from "@/assets/bms/trust elements.webp";
 
 //sections
 import s1 from "@/assets/bms/s1a1.png";
@@ -31,7 +30,6 @@ import s3a from "@/assets/bms/s3a.png";
 import s10 from "@/assets/bms/s10a.jpeg";
 import s11 from "@/assets/bms/s11.jpeg";
 import s13 from "@/assets/bms/s13.png";
-import s15 from "@/assets/bms/Pasted image.png";
 
 //videos
 import s10v from "@/assets/bms/s10va.mp4";
@@ -430,7 +428,7 @@ export default function BMSPage() {
         {/* Section-5-end goals */}
 
         <div style={{ margin: 70, transform: "scale(0.95)" }}>
-          <SectionImage src={endGoals} alt="BMS Case Study - End Goals" />
+          <EndGoalsSection />
         </div>
 
         {/* Section -6 - breakdown of problem */}
@@ -499,10 +497,7 @@ export default function BMSPage() {
           <div></div>
 
           <div style={{ transform: "scale(.65)" }}>
-            <SectionImage
-              src={breakDown}
-              alt="BMS Case Study - Breakdown of the Problem"
-            />
+            <BreakdownSection />
           </div>
         </div>
 
@@ -964,7 +959,7 @@ export default function BMSPage() {
                 boxShadow: "0 24px 40px rgba(0,0,0,0.08)",
               }}
             >
-              <SectionImage src={s15} alt="Numbers" />
+              <ThankYouStrip />
             </CaseStudyContainer>
           </div>
         </div>

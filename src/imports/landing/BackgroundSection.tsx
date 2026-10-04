@@ -2,11 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 // @ts-ignore
 
-import imgBazarghorr from "@/assets/work/bazarghorr1.png";
-import imgBuildMyStore from "@/assets/work/bms1.png";
-import imgMentorMe from "@/assets/work/mentorme1.png";
-import newBackground from "@/assets/landing-work/blue-bg.png";
-// import journey from "@/assets/landing-work/journey.png"
+import imgBazarghorr from "@/assets/work/bazarghorr1.webp";
+import imgBuildMyStore from "@/assets/work/bms1.webp";
+import imgMentorMe from "@/assets/work/mentorme1.webp";
+import newBackground from "@/assets/landing-work/blue-bg.webp";
 
 type BackgroundSectionProps = {
   containerRef?: React.RefObject<HTMLDivElement | null>;

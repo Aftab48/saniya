@@ -1,10 +1,10 @@
 import React, { useCallback, useState } from "react";
 // @ts-ignore
-import imgContactMe1 from "figma:asset/1077e5ec0d9d3a9da413e90dbe1960e8121cb40b.png";
+import imgContactMe1 from "@/assets/1077e5ec0d9d3a9da413e90dbe1960e8121cb40b.webp";
 // @ts-ignore
-import imgLocationPng1 from "figma:asset/33c5347c8865ddee8a9ed022a5443794850405f7.png";
+import imgLocationPng1 from "@/assets/33c5347c8865ddee8a9ed022a5443794850405f7.webp";
 // @ts-ignore
-import imgMeIcon1 from "figma:asset/c86a38aafd6e5f2f41dab258742a41c31f635ea3.png";
+import imgMeIcon1 from "@/assets/c86a38aafd6e5f2f41dab258742a41c31f635ea3.webp";
 import { Link } from "react-router-dom";
 
 const EXPANDABLE_CARD_BASE_CLASS =
