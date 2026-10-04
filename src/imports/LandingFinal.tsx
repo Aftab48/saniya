@@ -98,7 +98,8 @@ function LandingSections({
 
       <div
         id="journey"
-        style={{ width: "100%", transform: "scale(1.05)", padding: "60px 0" }}
+        // Above the footer's tall transparent z-50 layer so the Show more button gets clicks.
+        style={{ width: "100%", transform: "scale(1.05)", padding: "60px 0", position: "relative", zIndex: 51 }}
       >
         <JourneyBlock />
       </div>
