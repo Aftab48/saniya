@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { At, DesignCanvas, Txt } from "@/components/ui/DesignCanvas";
 
 // Coded version of the old journey.png export (1920 x 1511 design px).
@@ -25,9 +25,13 @@ const ENTRIES: [string, number | null, string, string, number, number, number?, 
   ["Winner of Kriti Hackathon, NIT Patna", null, "September 2024", "Designed Furnico, a furniture shopping app using AR/VR to visualize products in real environments.", 1436, 1491, 1787, 17.9],
 ];
 
+const VISIBLE = 5;
+
 export default function JourneySection() {
+  const [expanded, setExpanded] = useState(false);
+  const entries = expanded ? ENTRIES : ENTRIES.slice(0, VISIBLE);
   return (
-    <DesignCanvas width={1920} height={1511}>
+    <DesignCanvas width={1920} height={expanded ? 1511 : 1200}>
       <At x={0} y={0} w={1920} h={1430} style={{ background: "#fefcf4" }} />
       <Txt x={965} y={109} size={56.5} k={0.145} align="center" style={{ ...HEADING, fontWeight: 750, letterSpacing: 0 }}>
         JOURNEY
@@ -35,7 +39,7 @@ export default function JourneySection() {
       <Txt x={959.5} y={192} size={22.2} k={0.025} align="center" style={{ ...BLUE, fontWeight: 700 }}>
         Somewhere between logic and exploration, that’s where my design journey lives.
       </Txt>
-      {ENTRIES.map(([title, tagX, date, desc, y, dy, right = 1773, descSize = 19.9]) => (
+      {entries.map(([title, tagX, date, desc, y, dy, right = 1773, descSize = 19.9]) => (
         <div key={title}>
           <Txt x={138} y={y + 2} size={34} k={0.145} style={HEADING}>
             {title}
@@ -53,6 +57,27 @@ export default function JourneySection() {
           </Txt>
         </div>
       ))}
+      {!expanded && (
+        <button
+          type="button"
+          onClick={() => setExpanded(true)}
+          style={{
+            position: "absolute",
+            left: 960,
+            top: 1105,
+            transform: "translateX(-50%)",
+            padding: "16px 44px",
+            borderRadius: 60,
+            border: "2px solid #2d6dc3",
+            background: "transparent",
+            cursor: "pointer",
+            ...BLUE,
+            fontSize: 24,
+          }}
+        >
+          Show more
+        </button>
+      )}
     </DesignCanvas>
   );
 }
